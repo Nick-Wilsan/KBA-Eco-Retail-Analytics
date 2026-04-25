@@ -1,0 +1,14 @@
+# Mengabaikan file environment yang berisi rahasia/jalur
+.env
+
+# Mengabaikan folder database dan isinya
+data/*.duckdb
+data/*.db
+metabase-data/
+
+# Mengabaikan dataset mentah berukuran besar
+data/*.csv
+
+# Mengabaikan folder virtual environment Python (jika ada)
+venv/
+__pycache__/
