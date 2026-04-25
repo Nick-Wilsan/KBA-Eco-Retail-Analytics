@@ -6,7 +6,8 @@ services:
   # Berfungsi sebagai pengatur jadwal otomatis (Orkestrasi)
   # ----------------------------------------
   airflow:
-    image: apache/airflow:2.8.1
+    # image: apache/airflow:2.8.1
+    build: .                       #<-- (mengarah ke Dockerfile lokal)
     container_name: eco_airflow
     command: standalone
     ports:
@@ -16,6 +17,8 @@ services:
       - ./data:/opt/airflow/data
     environment:
       - AIRFLOW__CORE__LOAD_EXAMPLES=false
+      - AIRFLOW__WEBSERVER__WEB_SERVER_MASTER_TIMEOUT=300
+      - AIRFLOW__WEBSERVER__WEB_SERVER_WORKER_TIMEOUT=300
 
   # ----------------------------------------
   # 2. METABASE COMMUNITY EDITION
@@ -29,5 +32,6 @@ services:
     volumes:
       - ./metabase-data:/metabase-data
       - ./data:/data
+      - ./metabase-plugins:/plugins
     environment:
       - MB_DB_FILE=/metabase-data/metabase.db

@@ -1,0 +1,8 @@
+eco_retail_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'data/warehouse.duckdb' 
+      schema: warehouse
+      threads: 4
