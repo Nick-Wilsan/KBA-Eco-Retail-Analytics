@@ -1,0 +1,14 @@
+# Menggunakan OS Linux standar (Ubuntu/Debian) dengan Java 17
+FROM eclipse-temurin:17-jre
+
+# Buat folder kerja
+WORKDIR /app
+
+# Download aplikasi Metabase versi resmi (menghindari OS Alpine)
+ADD https://downloads.metabase.com/v0.49.13/metabase.jar metabase.jar
+
+# Buka port 3000
+EXPOSE 3000
+
+# Jalankan Metabase
+CMD ["java", "-jar", "metabase.jar"]

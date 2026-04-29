@@ -22,13 +22,15 @@ services:
   # Berfungsi untuk visualisasi dashboard interaktif
   # ----------------------------------------
   metabase:
-    image: metabase/metabase:latest
-    container_name: eco_metabase
+    build:
+      context: .
+      dockerfile: Dockerfile.metabase
     ports:
       - "3000:3000"
     volumes:
       - ./metabase-data:/metabase-data
+      - ./metabase-plugins:/metabase-plugins
       - ./data:/data
-      - ./metabase-plugins:/plugins
     environment:
       - MB_DB_FILE=/metabase-data/metabase.db
+      - MB_PLUGINS_DIR=/metabase-plugins
