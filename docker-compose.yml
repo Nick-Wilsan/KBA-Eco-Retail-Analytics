@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   # ----------------------------------------
-  # 1. PREFECT SERVER (Pengganti Airflow)
+  # 1. PREFECT SERVER
   # Berfungsi sebagai pengatur jadwal otomatis (Orkestrasi)
   # ----------------------------------------
   prefect:
