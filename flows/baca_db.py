@@ -2,7 +2,7 @@ import duckdb
 
 # Sambungkan ke database Anda
 # (Pastikan path ini sesuai dengan lokasi file database Anda)
-conn = duckdb.connect("data/warehouse.duckdb")
+conn = duckdb.connect("data/warehouse.duckdb") 
 
 print("=== DAFTAR SKEMA ===")
 # Menggunakan standar SQL (information_schema) alih-alih SHOW SCHEMAS
