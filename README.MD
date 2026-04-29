@@ -2,14 +2,15 @@
 
 Proyek Business Intelligence (BI) untuk optimisasi Food Waste dan Rantai Pasok Dingin (Cold Chain) menggunakan ekosistem open-source.
 
-## Arsitektur Sistem
-Sistem berjalan sepenuhnya di mesin lokal menggunakan Docker Compose dengan teknologi berikut:
-- **Data Source:** Dataset Kaggle (CSV)
-- **Data Warehouse:** DuckDB
-- **Orchestration:** Apache Airflow
-- **Transformation:** dbt Core
-- **Visualization:** Metabase Community
-- **Machine Learning:** Prophet & Scikit-learn (Python)
+## 🏗️ Architecture & Tech Stack
+
+Proyek ini mengadopsi **Medallion Architecture** (Bronze, Silver, Gold) untuk memastikan kualitas dan skalabilitas data. Seluruh infrastruktur di-deploy secara lokal menggunakan **Docker Compose**.
+
+* **Orchestration:** Prefect (Menggantikan Airflow untuk otomasi pipeline yang lebih ringan dan python-native).
+* **Data Warehouse / Database:** DuckDB (OLAP database berkinerja tinggi).
+* **Data Transformation:** dbt (data build tool) untuk pembersihan dan agregasi data antar layer Medallion.
+* **Business Intelligence:** Metabase (Dashboarding dengan Role-Based Access Control / RBAC).
+* **Machine Learning:** Scikit-learn & Prophet (Dalam pengembangan untuk fase analitik prediktif).
 
 ## Cara Menjalankan Sistem
 1. Pastikan Docker Desktop sudah terinstal dan berjalan.
