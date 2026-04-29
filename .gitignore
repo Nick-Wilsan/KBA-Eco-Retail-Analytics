@@ -20,3 +20,4 @@ __pycache__/
 # Abaikan plugin bawaan Metabase
 metabase-plugins/
 *.jar
+*.csv

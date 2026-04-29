@@ -1,0 +1,18 @@
+# dbt_project.yml
+
+models:
+  eco_retail_analytics:
+    # Semua model di folder bronze akan masuk ke skema 'bronze'
+    bronze:
+      +schema: bronze
+      +materialized: view # Disarankan view untuk raw data
+
+    # Semua model di folder silver akan masuk ke skema 'silver'
+    silver:
+      +schema: silver
+      +materialized: table
+
+    # Semua model di folder gold akan masuk ke skema 'gold'
+    gold:
+      +schema: gold
+      +materialized: table # Disarankan table agar Metabase bisa query dengan cepat
