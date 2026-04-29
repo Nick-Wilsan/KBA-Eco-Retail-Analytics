@@ -2,23 +2,20 @@ version: '3.8'
 
 services:
   # ----------------------------------------
-  # 1. APACHE AIRFLOW
+  # 1. PREFECT SERVER (Pengganti Airflow)
   # Berfungsi sebagai pengatur jadwal otomatis (Orkestrasi)
   # ----------------------------------------
-  airflow:
-    # image: apache/airflow:2.8.1
-    build: .                       #<-- (mengarah ke Dockerfile lokal)
-    container_name: eco_airflow
-    command: standalone
+  prefect:
+    build: .                       # <-- Tetap mengarah ke Dockerfile lokal
+    container_name: eco_prefect
+    command: prefect server start --host 0.0.0.0
     ports:
-      - "8080:8080"
+      - "4200:4200"                # Port default untuk UI Prefect
     volumes:
-      - ./dags:/opt/airflow/dags
-      - ./data:/opt/airflow/data
+      - ./flows:/opt/prefect/flows # Folder flows milikmu
+      - ./data:/opt/prefect/data   # Folder penyimpanan DuckDB & CSV
     environment:
-      - AIRFLOW__CORE__LOAD_EXAMPLES=false
-      - AIRFLOW__WEBSERVER__WEB_SERVER_MASTER_TIMEOUT=300
-      - AIRFLOW__WEBSERVER__WEB_SERVER_WORKER_TIMEOUT=300
+      - PREFECT_API_URL=http://127.0.0.1:4200/api
 
   # ----------------------------------------
   # 2. METABASE COMMUNITY EDITION

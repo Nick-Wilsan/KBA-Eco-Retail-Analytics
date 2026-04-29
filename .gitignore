@@ -12,3 +12,11 @@ data/*.csv
 # Mengabaikan folder virtual environment Python (jika ada)
 venv/
 __pycache__/
+
+# Abaikan file hasil database
+*.duckdb
+*.db
+
+# Abaikan plugin bawaan Metabase
+metabase-plugins/
+*.jar
