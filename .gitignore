@@ -2,7 +2,6 @@
 .env
 
 # Mengabaikan folder database dan isinya
-data/*.duckdb
 data/*.db
 metabase-data/
 
