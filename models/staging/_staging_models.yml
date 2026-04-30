@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_instacart_grocery
+    description: "Model staging untuk data instacart grocery yang sudah dibersihkan tipe datanya."
+    columns:
+      - name: order_id
+        description: "ID unik untuk setiap pesanan."
+        tests:
+          - not_null
+      
+      - name: product_id
+        description: "ID unik untuk produk yang dibeli."
+        tests:
+          - not_null
+
+      - name: is_reordered
+        description: "Indikator boolean apakah produk ini pernah dibeli sebelumnya oleh user yang sama."
+
+      - name: ingested_at
+        description: "Timestamp saat data di-load ke lapisan bronze."
+
+  # Lanjutkan untuk model staging lainnya
+  # - name: stg_inventory
+  #   description: "..."

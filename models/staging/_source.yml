@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: eco_retail_bronze
+    schema: bronze
+    description: "Data mentah yang ditarik langsung dari CSV Kaggle"
+    tables:
+      - name: instacart_grocery
+        description: "Data transaksi/keranjang belanja instacart"
+        # Tambahkan bagian kolom dan tests di sini:
+        columns:
+          - name: order_id
+            tests:
+              - not_null
+          - name: product_id
+            tests:
+              - not_null
