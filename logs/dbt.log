@@ -2336,3 +2336,1452 @@ alter table "warehouse"."warehouse_silver"."silver_fact_sales__dbt_tmp" rename t
 [0m11:16:37.942298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDF58C5B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDFC4F9DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDF5B0ED50>]}
 [0m11:16:37.944705 [debug] [MainThread]: Flushing usage events
 [0m11:16:40.007706 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:38:05.214432 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235E3BE3B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235E3C7B850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235E3C7AF10>]}
+
+
+============================== 11:38:05.230424 | 3a020d93-ba5a-454c-932b-1ce943a149a0 ==============================
+[0m11:38:05.230424 [info ] [MainThread]: Running with dbt=1.11.8
+[0m11:38:05.230424 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'E:\\Tugas\\S4\\KBA\\project\\KBA-Eco-Retail-Analytics', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt test --select staging', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'E:\\Tugas\\S4\\KBA\\project\\KBA-Eco-Retail-Analytics\\logs'}
+[0m11:38:05.561743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3a020d93-ba5a-454c-932b-1ce943a149a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235E3E74890>]}
+[0m11:38:05.646887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3a020d93-ba5a-454c-932b-1ce943a149a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235DBFBFE10>]}
+[0m11:38:05.652653 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m11:38:06.043617 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m11:38:06.265162 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:38:06.265162 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m11:38:06.265162 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:38:06.312961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3a020d93-ba5a-454c-932b-1ce943a149a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235E3D0E910>]}
+[0m11:38:06.408756 [debug] [MainThread]: Wrote artifact WritableManifest to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\manifest.json
+[0m11:38:06.408756 [debug] [MainThread]: Wrote artifact SemanticManifest to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\semantic_manifest.json
+[0m11:38:06.448555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3a020d93-ba5a-454c-932b-1ce943a149a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235E4507ED0>]}
+[0m11:38:06.448555 [info ] [MainThread]: Found 18 models, 2 data tests, 5 sources, 475 macros
+[0m11:38:06.448555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3a020d93-ba5a-454c-932b-1ce943a149a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235E3DE3150>]}
+[0m11:38:06.448555 [info ] [MainThread]: 
+[0m11:38:06.456170 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:38:06.456746 [info ] [MainThread]: 
+[0m11:38:06.458387 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m11:38:06.462207 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_warehouse_gold'
+[0m11:38:06.462207 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_warehouse_bronze'
+[0m11:38:06.478493 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_warehouse_silver'
+[0m11:38:06.478493 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_warehouse'
+[0m11:38:06.576832 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_gold"
+[0m11:38:06.576832 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_bronze"
+[0m11:38:06.576832 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_silver"
+[0m11:38:06.576832 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse"
+[0m11:38:06.576832 [debug] [ThreadPool]: On list_warehouse_warehouse_gold: BEGIN
+[0m11:38:06.576832 [debug] [ThreadPool]: On list_warehouse_warehouse_bronze: BEGIN
+[0m11:38:06.576832 [debug] [ThreadPool]: On list_warehouse_warehouse_silver: BEGIN
+[0m11:38:06.576832 [debug] [ThreadPool]: On list_warehouse_warehouse: BEGIN
+[0m11:38:06.576832 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:38:06.576832 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:38:06.576832 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:38:06.576832 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:38:06.608571 [debug] [ThreadPool]: SQL status: OK in 0.027 seconds
+[0m11:38:06.608571 [debug] [ThreadPool]: SQL status: OK in 0.026 seconds
+[0m11:38:06.608571 [debug] [ThreadPool]: SQL status: OK in 0.027 seconds
+[0m11:38:06.608571 [debug] [ThreadPool]: SQL status: OK in 0.026 seconds
+[0m11:38:06.608571 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_gold"
+[0m11:38:06.608571 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_silver"
+[0m11:38:06.608571 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_bronze"
+[0m11:38:06.608571 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse"
+[0m11:38:06.608571 [debug] [ThreadPool]: On list_warehouse_warehouse_gold: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_warehouse_gold"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'warehouse_gold'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m11:38:06.608571 [debug] [ThreadPool]: On list_warehouse_warehouse_silver: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_warehouse_silver"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'warehouse_silver'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m11:38:06.608571 [debug] [ThreadPool]: On list_warehouse_warehouse_bronze: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_warehouse_bronze"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'warehouse_bronze'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m11:38:06.608571 [debug] [ThreadPool]: On list_warehouse_warehouse: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_warehouse"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'warehouse'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m11:38:06.648970 [debug] [ThreadPool]: SQL status: OK in 0.028 seconds
+[0m11:38:06.648970 [debug] [ThreadPool]: SQL status: OK in 0.029 seconds
+[0m11:38:06.648970 [debug] [ThreadPool]: SQL status: OK in 0.029 seconds
+[0m11:38:06.648970 [debug] [ThreadPool]: SQL status: OK in 0.029 seconds
+[0m11:38:06.648970 [debug] [ThreadPool]: On list_warehouse_warehouse_silver: ROLLBACK
+[0m11:38:06.648970 [debug] [ThreadPool]: On list_warehouse_warehouse_gold: ROLLBACK
+[0m11:38:06.648970 [debug] [ThreadPool]: On list_warehouse_warehouse_bronze: ROLLBACK
+[0m11:38:06.657150 [debug] [ThreadPool]: On list_warehouse_warehouse: ROLLBACK
+[0m11:38:06.657150 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_warehouse_silver'
+[0m11:38:06.657150 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_warehouse_gold'
+[0m11:38:06.657150 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_warehouse_bronze'
+[0m11:38:06.657150 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_warehouse'
+[0m11:38:06.657150 [debug] [ThreadPool]: On list_warehouse_warehouse_silver: Close
+[0m11:38:06.657150 [debug] [ThreadPool]: On list_warehouse_warehouse_gold: Close
+[0m11:38:06.657150 [debug] [ThreadPool]: On list_warehouse_warehouse_bronze: Close
+[0m11:38:06.657150 [debug] [ThreadPool]: On list_warehouse_warehouse: Close
+[0m11:38:06.657150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3a020d93-ba5a-454c-932b-1ce943a149a0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235E4183150>]}
+[0m11:38:06.657150 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:38:06.657150 [debug] [MainThread]: On master: BEGIN
+[0m11:38:06.657150 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:38:06.672616 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m11:38:06.672616 [debug] [MainThread]: On master: COMMIT
+[0m11:38:06.672616 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:38:06.672616 [debug] [MainThread]: On master: COMMIT
+[0m11:38:06.672616 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:38:06.672616 [debug] [MainThread]: On master: Close
+[0m11:38:06.672616 [debug] [Thread-1 (]: Began running node test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96
+[0m11:38:06.672616 [debug] [Thread-2 (]: Began running node test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b
+[0m11:38:06.672616 [info ] [Thread-1 (]: 1 of 2 START test not_null_stg_instacart_grocery_order_id ...................... [RUN]
+[0m11:38:06.672616 [info ] [Thread-2 (]: 2 of 2 START test not_null_stg_instacart_grocery_product_id .................... [RUN]
+[0m11:38:06.672616 [debug] [Thread-1 (]: Acquiring new duckdb connection 'test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96'
+[0m11:38:06.672616 [debug] [Thread-2 (]: Acquiring new duckdb connection 'test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b'
+[0m11:38:06.688374 [debug] [Thread-1 (]: Began compiling node test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96
+[0m11:38:06.688374 [debug] [Thread-2 (]: Began compiling node test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b
+[0m11:38:06.707789 [debug] [Thread-1 (]: Writing injected SQL for node "test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96"
+[0m11:38:06.713479 [debug] [Thread-2 (]: Writing injected SQL for node "test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b"
+[0m11:38:06.713479 [debug] [Thread-1 (]: Began executing node test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96
+[0m11:38:06.739050 [debug] [Thread-1 (]: Writing runtime sql for node "test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96"
+[0m11:38:06.740051 [debug] [Thread-2 (]: Began executing node test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b
+[0m11:38:06.743088 [debug] [Thread-2 (]: Writing runtime sql for node "test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b"
+[0m11:38:06.744808 [debug] [Thread-1 (]: Using duckdb connection "test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96"
+[0m11:38:06.745897 [debug] [Thread-1 (]: On test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96: BEGIN
+[0m11:38:06.746898 [debug] [Thread-2 (]: Using duckdb connection "test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b"
+[0m11:38:06.746898 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:38:06.747899 [debug] [Thread-2 (]: On test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b: BEGIN
+[0m11:38:06.749933 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m11:38:06.750595 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:38:06.751238 [debug] [Thread-1 (]: Using duckdb connection "test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96"
+[0m11:38:06.752045 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m11:38:06.753052 [debug] [Thread-1 (]: On test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from "warehouse"."warehouse"."stg_instacart_grocery"
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:38:06.754050 [debug] [Thread-2 (]: Using duckdb connection "test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b"
+[0m11:38:06.755883 [debug] [Thread-2 (]: On test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_id
+from "warehouse"."warehouse"."stg_instacart_grocery"
+where product_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:38:06.756889 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m11:38:06.760918 [debug] [Thread-1 (]: On test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96: ROLLBACK
+[0m11:38:06.761884 [debug] [Thread-2 (]: SQL status: OK in 0.006 seconds
+[0m11:38:06.761884 [debug] [Thread-1 (]: Failed to rollback 'test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96'
+[0m11:38:06.763964 [debug] [Thread-2 (]: On test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b: ROLLBACK
+[0m11:38:06.763964 [debug] [Thread-1 (]: On test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96: Close
+[0m11:38:06.763964 [debug] [Thread-2 (]: Failed to rollback 'test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b'
+[0m11:38:06.763964 [info ] [Thread-1 (]: 1 of 2 PASS not_null_stg_instacart_grocery_order_id ............................ [[32mPASS[0m in 0.09s]
+[0m11:38:06.763964 [debug] [Thread-2 (]: On test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b: Close
+[0m11:38:06.763964 [debug] [Thread-1 (]: Finished running node test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96
+[0m11:38:06.772709 [info ] [Thread-2 (]: 2 of 2 PASS not_null_stg_instacart_grocery_product_id .......................... [[32mPASS[0m in 0.10s]
+[0m11:38:06.772709 [debug] [Thread-2 (]: Finished running node test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b
+[0m11:38:06.772709 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:38:06.777673 [debug] [MainThread]: On master: BEGIN
+[0m11:38:06.778831 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:38:06.780843 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m11:38:06.783061 [debug] [MainThread]: On master: COMMIT
+[0m11:38:06.784059 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:38:06.784399 [debug] [MainThread]: On master: COMMIT
+[0m11:38:06.787089 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m11:38:06.787089 [debug] [MainThread]: On master: Close
+[0m11:38:06.787089 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:38:06.791934 [debug] [MainThread]: Connection 'list_warehouse_warehouse_gold' was properly closed.
+[0m11:38:06.791934 [debug] [MainThread]: Connection 'list_warehouse_warehouse_bronze' was properly closed.
+[0m11:38:06.791934 [debug] [MainThread]: Connection 'list_warehouse_warehouse_silver' was properly closed.
+[0m11:38:06.794661 [debug] [MainThread]: Connection 'list_warehouse_warehouse' was properly closed.
+[0m11:38:06.795602 [debug] [MainThread]: Connection 'test.eco_retail_analytics.not_null_stg_instacart_grocery_order_id.2fea37eb96' was properly closed.
+[0m11:38:06.795602 [debug] [MainThread]: Connection 'test.eco_retail_analytics.not_null_stg_instacart_grocery_product_id.6e259cd39b' was properly closed.
+[0m11:38:06.795602 [info ] [MainThread]: 
+[0m11:38:06.795602 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 0.34 seconds (0.34s).
+[0m11:38:06.795602 [debug] [MainThread]: Command end result
+[0m11:38:06.829028 [debug] [MainThread]: Wrote artifact WritableManifest to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\manifest.json
+[0m11:38:06.844667 [debug] [MainThread]: Wrote artifact SemanticManifest to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\semantic_manifest.json
+[0m11:38:06.852301 [debug] [MainThread]: Wrote artifact RunExecutionResult to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\run_results.json
+[0m11:38:06.853266 [info ] [MainThread]: 
+[0m11:38:06.854262 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:38:06.855262 [info ] [MainThread]: 
+[0m11:38:06.856295 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m11:38:06.858326 [debug] [MainThread]: Command `dbt test` succeeded at 11:38:06.858326 after 1.75 seconds
+[0m11:38:06.859297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235E29A45D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235DBCE5B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235E3C03150>]}
+[0m11:38:06.859851 [debug] [MainThread]: Flushing usage events
+[0m11:38:09.920058 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:46:45.333774 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000189BC041210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000189BC0D5350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000189BC0406D0>]}
+
+
+============================== 16:46:45.425192 | c4b232d1-598f-4df2-ad37-b48d7fd52501 ==============================
+[0m16:46:45.425192 [info ] [MainThread]: Running with dbt=1.11.8
+[0m16:46:45.425192 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'E:\\Tugas\\S4\\KBA\\project\\KBA-Eco-Retail-Analytics', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --select gold', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'E:\\Tugas\\S4\\KBA\\project\\KBA-Eco-Retail-Analytics\\logs'}
+[0m16:46:45.910592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c4b232d1-598f-4df2-ad37-b48d7fd52501', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000189BC150290>]}
+[0m16:46:46.004469 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c4b232d1-598f-4df2-ad37-b48d7fd52501', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000189B77B5750>]}
+[0m16:46:46.020652 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:46:46.442961 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m16:46:47.664397 [debug] [MainThread]: Partial parsing enabled: 3 files deleted, 5 files added, 0 files changed.
+[0m16:46:47.665905 [debug] [MainThread]: Partial parsing: added file: eco_retail_analytics://models\gold\gold_mart_food_waste_summary.sql
+[0m16:46:47.665905 [debug] [MainThread]: Partial parsing: added file: eco_retail_analytics://models\gold\gold_mart_demand_forecast.sql
+[0m16:46:47.668202 [debug] [MainThread]: Partial parsing: added file: eco_retail_analytics://models\gold\gold_mart_supplier_performance.sql
+[0m16:46:47.668202 [debug] [MainThread]: Partial parsing: added file: eco_retail_analytics://models\gold\gold_mart_executive_kpi.sql
+[0m16:46:47.668202 [debug] [MainThread]: Partial parsing: added file: eco_retail_analytics://models\gold\gold_mart_cold_chain_compliance.sql
+[0m16:46:47.670108 [debug] [MainThread]: Partial parsing: deleted file: eco_retail_analytics://models\gold\fct_food_waste.sql
+[0m16:46:47.670108 [debug] [MainThread]: Partial parsing: deleted file: eco_retail_analytics://models\staging\stg_dataset_lain.sql
+[0m16:46:47.670108 [debug] [MainThread]: Partial parsing: deleted file: eco_retail_analytics://models\gold\dim_products.sql
+[0m16:46:48.042960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c4b232d1-598f-4df2-ad37-b48d7fd52501', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000189BC992850>]}
+[0m16:46:48.145918 [debug] [MainThread]: Wrote artifact WritableManifest to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\manifest.json
+[0m16:46:48.151674 [debug] [MainThread]: Wrote artifact SemanticManifest to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\semantic_manifest.json
+[0m16:46:48.179864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c4b232d1-598f-4df2-ad37-b48d7fd52501', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000189BC3BA190>]}
+[0m16:46:48.181876 [info ] [MainThread]: Found 20 models, 2 data tests, 5 sources, 475 macros
+[0m16:46:48.183625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c4b232d1-598f-4df2-ad37-b48d7fd52501', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000189BC62D290>]}
+[0m16:46:48.186549 [info ] [MainThread]: 
+[0m16:46:48.186549 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:46:48.186549 [info ] [MainThread]: 
+[0m16:46:48.190389 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:46:48.200008 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse'
+[0m16:46:48.318581 [debug] [ThreadPool]: Using duckdb connection "list_warehouse"
+[0m16:46:48.318581 [debug] [ThreadPool]: On list_warehouse: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"warehouse"'
+    
+  
+  
+[0m16:46:48.318581 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:46:48.446719 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "e:\tugas\s4\kba\project\kba-eco-retail-analytics\data\warehouse.duckdb": The process cannot access the file because it is being used by another process.
+
+File is already open in 
+C:\Windows\System32\dllhost.exe (PID 10900)
+[0m16:46:48.446719 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"warehouse"'
+    
+  
+  
+[0m16:46:48.454370 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:46:48.454370 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:46:48.541924 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "e:\tugas\s4\kba\project\kba-eco-retail-analytics\data\warehouse.duckdb": The process cannot access the file because it is being used by another process.
+
+File is already open in 
+C:\Windows\System32\dllhost.exe (PID 10900)
+[0m16:46:48.541924 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: macro list_schemas
+[0m16:46:48.541924 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:46:48.541924 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:46:48.652688 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:46:48.652688 [debug] [MainThread]: Connection 'list_warehouse' was properly closed.
+[0m16:46:48.652688 [info ] [MainThread]: 
+[0m16:46:48.652688 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.46 seconds (0.46s).
+[0m16:46:48.652688 [error] [MainThread]: Encountered an error:
+IO Error: Cannot open file "e:\tugas\s4\kba\project\kba-eco-retail-analytics\data\warehouse.duckdb": The process cannot access the file because it is being used by another process.
+
+File is already open in 
+C:\Windows\System32\dllhost.exe (PID 10900)
+[0m16:46:48.748581 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 95, in exception_handler
+    yield
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\sql\connections.py", line 147, in add_query
+    cursor = connection.handle.cursor()
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 53, in open
+    connection.handle = cls._ENV.handle()
+                        ^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 75, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 159, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_duckdb.IOException: IO Error: Cannot open file "e:\tugas\s4\kba\project\kba-eco-retail-analytics\data\warehouse.duckdb": The process cannot access the file because it is being used by another process.
+
+File is already open in 
+C:\Windows\System32\dllhost.exe (PID 10900)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 95, in exception_handler
+    yield
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\base\impl.py", line 1320, in execute_macro
+    result = macro_function(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt_common\clients\jinja.py", line 427, in __call__
+    return self.call_macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "<template>", line 20, in macro
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\clients\jinja.py", line 82, in __call__
+    return self.call_macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "<template>", line 50, in macro
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\clients\jinja.py", line 82, in __call__
+    return self.call_macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "<template>", line 33, in macro
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\clients\jinja.py", line 82, in __call__
+    return self.call_macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "<template>", line 52, in macro
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt_common\record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\base\impl.py", line 471, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 130, in execute
+    return super().execute(sql, auto_begin, fetch, limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\sql\connections.py", line 219, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\sql\connections.py", line 131, in add_query
+    with self.exception_handler(sql):
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 102, in exception_handler
+    self.rollback_if_open()
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\base\connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 53, in open
+    connection.handle = cls._ENV.handle()
+                        ^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 75, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 159, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_duckdb.IOException: IO Error: Cannot open file "e:\tugas\s4\kba\project\kba-eco-retail-analytics\data\warehouse.duckdb": The process cannot access the file because it is being used by another process.
+
+File is already open in 
+C:\Windows\System32\dllhost.exe (PID 10900)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 391, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 408, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\main.py", line 593, in run
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\runnable.py", line 626, in run
+    result = self.execute_with_hooks(selected_uids)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\runnable.py", line 559, in execute_with_hooks
+    before_run_status = self.before_run(adapter, selected_uids)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\run.py", line 1114, in before_run
+    self.create_schemas(adapter, required_schemas)
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\runnable.py", line 734, in create_schemas
+    existing_schemas_lowered.update(ls_future.result())
+                                    ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt_common\utils\executor.py", line 16, in connected
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\runnable.py", line 709, in list_schemas
+    for s in adapter.list_schemas(database_quoted)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\sql\impl.py", line 218, in list_schemas
+    results = self.execute_macro(LIST_SCHEMAS_MACRO_NAME, kwargs={"database": database})
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\base\impl.py", line 1319, in execute_macro
+    with self.connections.exception_handler(f"macro {macro_name}"):
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 102, in exception_handler
+    self.rollback_if_open()
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\base\connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 53, in open
+    connection.handle = cls._ENV.handle()
+                        ^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 75, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\onepu\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 159, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_duckdb.IOException: IO Error: Cannot open file "e:\tugas\s4\kba\project\kba-eco-retail-analytics\data\warehouse.duckdb": The process cannot access the file because it is being used by another process.
+
+File is already open in 
+C:\Windows\System32\dllhost.exe (PID 10900)
+
+[0m16:46:48.750601 [debug] [MainThread]: Command `dbt run` failed at 16:46:48.750601 after 3.56 seconds
+[0m16:46:48.753218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000189BC11F510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000189BC11D150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000189BC5E1210>]}
+[0m16:46:48.753218 [debug] [MainThread]: Flushing usage events
+[0m16:46:50.681113 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:48:55.764994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F32C303E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F32C303550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F32C303C90>]}
+
+
+============================== 16:48:55.774438 | ea39c1ad-cd8a-4339-9d70-86c87eec2bee ==============================
+[0m16:48:55.774438 [info ] [MainThread]: Running with dbt=1.11.8
+[0m16:48:55.774438 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'E:\\Tugas\\S4\\KBA\\project\\KBA-Eco-Retail-Analytics', 'invocation_command': 'dbt run --select gold', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'E:\\Tugas\\S4\\KBA\\project\\KBA-Eco-Retail-Analytics\\logs'}
+[0m16:48:56.253584 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ea39c1ad-cd8a-4339-9d70-86c87eec2bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F32C42DD90>]}
+[0m16:48:56.370344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ea39c1ad-cd8a-4339-9d70-86c87eec2bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F327A94110>]}
+[0m16:48:56.388420 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:48:56.940223 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m16:48:57.255313 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:48:57.255313 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:48:57.255313 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:48:57.330437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ea39c1ad-cd8a-4339-9d70-86c87eec2bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F32C43CFD0>]}
+[0m16:48:57.484313 [debug] [MainThread]: Wrote artifact WritableManifest to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\manifest.json
+[0m16:48:57.491829 [debug] [MainThread]: Wrote artifact SemanticManifest to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\semantic_manifest.json
+[0m16:48:57.514715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ea39c1ad-cd8a-4339-9d70-86c87eec2bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F32CAC35D0>]}
+[0m16:48:57.516467 [info ] [MainThread]: Found 20 models, 2 data tests, 5 sources, 475 macros
+[0m16:48:57.516467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ea39c1ad-cd8a-4339-9d70-86c87eec2bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F32CB936D0>]}
+[0m16:48:57.521191 [info ] [MainThread]: 
+[0m16:48:57.521191 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:48:57.523716 [info ] [MainThread]: 
+[0m16:48:57.525516 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:48:57.535866 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse'
+[0m16:48:57.669428 [debug] [ThreadPool]: Using duckdb connection "list_warehouse"
+[0m16:48:57.669428 [debug] [ThreadPool]: On list_warehouse: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"warehouse"'
+    
+  
+  
+[0m16:48:57.669428 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:48:57.741048 [debug] [ThreadPool]: SQL status: OK in 0.062 seconds
+[0m16:48:57.741048 [debug] [ThreadPool]: On list_warehouse: Close
+[0m16:48:57.747912 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_warehouse, now create_warehouse_warehouse_gold)
+[0m16:48:57.747912 [debug] [ThreadPool]: Creating schema "database: "warehouse"
+schema: "warehouse_gold"
+"
+[0m16:48:57.747912 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_warehouse_gold"
+[0m16:48:57.747912 [debug] [ThreadPool]: On create_warehouse_warehouse_gold: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "create_warehouse_warehouse_gold"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='warehouse'
+        and type='sqlite'
+    
+  
+[0m16:48:57.747912 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:48:57.763566 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m16:48:57.763566 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_warehouse_gold"
+[0m16:48:57.763566 [debug] [ThreadPool]: On create_warehouse_warehouse_gold: BEGIN
+[0m16:48:57.763566 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:48:57.763566 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_warehouse_gold"
+[0m16:48:57.763566 [debug] [ThreadPool]: On create_warehouse_warehouse_gold: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "create_warehouse_warehouse_gold"} */
+
+    
+    
+        create schema if not exists "warehouse"."warehouse_gold"
+    
+[0m16:48:57.763566 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m16:48:57.763566 [debug] [ThreadPool]: On create_warehouse_warehouse_gold: COMMIT
+[0m16:48:57.763566 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_warehouse_gold"
+[0m16:48:57.763566 [debug] [ThreadPool]: On create_warehouse_warehouse_gold: COMMIT
+[0m16:48:58.057426 [debug] [ThreadPool]: SQL status: OK in 0.281 seconds
+[0m16:48:58.057426 [debug] [ThreadPool]: On create_warehouse_warehouse_gold: Close
+[0m16:48:58.076630 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_warehouse'
+[0m16:48:58.076630 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_warehouse_silver'
+[0m16:48:58.083429 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_warehouse_gold'
+[0m16:48:58.083429 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse"
+[0m16:48:58.083429 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_warehouse_bronze'
+[0m16:48:58.083429 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_silver"
+[0m16:48:58.099348 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_gold"
+[0m16:48:58.099348 [debug] [ThreadPool]: On list_warehouse_warehouse: BEGIN
+[0m16:48:58.099348 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_bronze"
+[0m16:48:58.099348 [debug] [ThreadPool]: On list_warehouse_warehouse_silver: BEGIN
+[0m16:48:58.099348 [debug] [ThreadPool]: On list_warehouse_warehouse_gold: BEGIN
+[0m16:48:58.099348 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:48:58.099348 [debug] [ThreadPool]: On list_warehouse_warehouse_bronze: BEGIN
+[0m16:48:58.099348 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:48:58.099348 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:48:58.099348 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m16:48:58.099348 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:48:58.099348 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m16:48:58.099348 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m16:48:58.099348 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse"
+[0m16:48:58.115291 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m16:48:58.115291 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_silver"
+[0m16:48:58.115291 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_gold"
+[0m16:48:58.115291 [debug] [ThreadPool]: On list_warehouse_warehouse: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_warehouse"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'warehouse'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m16:48:58.115291 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_bronze"
+[0m16:48:58.115291 [debug] [ThreadPool]: On list_warehouse_warehouse_silver: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_warehouse_silver"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'warehouse_silver'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m16:48:58.115291 [debug] [ThreadPool]: On list_warehouse_warehouse_gold: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_warehouse_gold"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'warehouse_gold'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m16:48:58.115291 [debug] [ThreadPool]: On list_warehouse_warehouse_bronze: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_warehouse_bronze"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'warehouse_bronze'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m16:48:58.160818 [debug] [ThreadPool]: SQL status: OK in 0.038 seconds
+[0m16:48:58.162824 [debug] [ThreadPool]: SQL status: OK in 0.042 seconds
+[0m16:48:58.162824 [debug] [ThreadPool]: SQL status: OK in 0.041 seconds
+[0m16:48:58.162824 [debug] [ThreadPool]: SQL status: OK in 0.040 seconds
+[0m16:48:58.162824 [debug] [ThreadPool]: On list_warehouse_warehouse_gold: ROLLBACK
+[0m16:48:58.162824 [debug] [ThreadPool]: On list_warehouse_warehouse: ROLLBACK
+[0m16:48:58.162824 [debug] [ThreadPool]: On list_warehouse_warehouse_silver: ROLLBACK
+[0m16:48:58.162824 [debug] [ThreadPool]: On list_warehouse_warehouse_bronze: ROLLBACK
+[0m16:48:58.162824 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_warehouse_gold'
+[0m16:48:58.162824 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_warehouse'
+[0m16:48:58.162824 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_warehouse_silver'
+[0m16:48:58.162824 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_warehouse_bronze'
+[0m16:48:58.162824 [debug] [ThreadPool]: On list_warehouse_warehouse_gold: Close
+[0m16:48:58.162824 [debug] [ThreadPool]: On list_warehouse_warehouse: Close
+[0m16:48:58.178702 [debug] [ThreadPool]: On list_warehouse_warehouse_silver: Close
+[0m16:48:58.178702 [debug] [ThreadPool]: On list_warehouse_warehouse_bronze: Close
+[0m16:48:58.178702 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ea39c1ad-cd8a-4339-9d70-86c87eec2bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F32C8736D0>]}
+[0m16:48:58.178702 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:48:58.178702 [debug] [MainThread]: On master: BEGIN
+[0m16:48:58.178702 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:48:58.178702 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:48:58.178702 [debug] [MainThread]: On master: COMMIT
+[0m16:48:58.178702 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:48:58.178702 [debug] [MainThread]: On master: COMMIT
+[0m16:48:58.178702 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:48:58.178702 [debug] [MainThread]: On master: Close
+[0m16:48:58.196297 [debug] [Thread-1 (]: Began running node model.eco_retail_analytics.gold_mart_cold_chain_compliance
+[0m16:48:58.196297 [debug] [Thread-2 (]: Began running node model.eco_retail_analytics.gold_mart_demand_forecast
+[0m16:48:58.196297 [debug] [Thread-3 (]: Began running node model.eco_retail_analytics.gold_mart_food_waste_summary
+[0m16:48:58.196297 [debug] [Thread-4 (]: Began running node model.eco_retail_analytics.gold_mart_supplier_performance
+[0m16:48:58.196297 [info ] [Thread-1 (]: 1 of 5 START sql table model warehouse_gold.gold_mart_cold_chain_compliance .... [RUN]
+[0m16:48:58.196297 [info ] [Thread-2 (]: 2 of 5 START sql table model warehouse_gold.gold_mart_demand_forecast .......... [RUN]
+[0m16:48:58.196297 [info ] [Thread-3 (]: 3 of 5 START sql table model warehouse_gold.gold_mart_food_waste_summary ....... [RUN]
+[0m16:48:58.210263 [info ] [Thread-4 (]: 4 of 5 START sql table model warehouse_gold.gold_mart_supplier_performance ..... [RUN]
+[0m16:48:58.210263 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.eco_retail_analytics.gold_mart_cold_chain_compliance'
+[0m16:48:58.214757 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.eco_retail_analytics.gold_mart_demand_forecast'
+[0m16:48:58.216153 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.eco_retail_analytics.gold_mart_food_waste_summary'
+[0m16:48:58.218256 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.eco_retail_analytics.gold_mart_supplier_performance'
+[0m16:48:58.220356 [debug] [Thread-1 (]: Began compiling node model.eco_retail_analytics.gold_mart_cold_chain_compliance
+[0m16:48:58.220935 [debug] [Thread-2 (]: Began compiling node model.eco_retail_analytics.gold_mart_demand_forecast
+[0m16:48:58.220935 [debug] [Thread-3 (]: Began compiling node model.eco_retail_analytics.gold_mart_food_waste_summary
+[0m16:48:58.225945 [debug] [Thread-4 (]: Began compiling node model.eco_retail_analytics.gold_mart_supplier_performance
+[0m16:48:58.237701 [debug] [Thread-1 (]: Writing injected SQL for node "model.eco_retail_analytics.gold_mart_cold_chain_compliance"
+[0m16:48:58.243385 [debug] [Thread-2 (]: Writing injected SQL for node "model.eco_retail_analytics.gold_mart_demand_forecast"
+[0m16:48:58.248746 [debug] [Thread-3 (]: Writing injected SQL for node "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m16:48:58.248746 [debug] [Thread-4 (]: Writing injected SQL for node "model.eco_retail_analytics.gold_mart_supplier_performance"
+[0m16:48:58.353137 [debug] [Thread-2 (]: Began executing node model.eco_retail_analytics.gold_mart_demand_forecast
+[0m16:48:58.353137 [debug] [Thread-1 (]: Began executing node model.eco_retail_analytics.gold_mart_cold_chain_compliance
+[0m16:48:58.353137 [debug] [Thread-3 (]: Began executing node model.eco_retail_analytics.gold_mart_food_waste_summary
+[0m16:48:58.353137 [debug] [Thread-4 (]: Began executing node model.eco_retail_analytics.gold_mart_supplier_performance
+[0m16:48:58.400903 [debug] [Thread-2 (]: Writing runtime sql for node "model.eco_retail_analytics.gold_mart_demand_forecast"
+[0m16:48:58.406436 [debug] [Thread-1 (]: Writing runtime sql for node "model.eco_retail_analytics.gold_mart_cold_chain_compliance"
+[0m16:48:58.406436 [debug] [Thread-3 (]: Writing runtime sql for node "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m16:48:58.416890 [debug] [Thread-4 (]: Writing runtime sql for node "model.eco_retail_analytics.gold_mart_supplier_performance"
+[0m16:48:58.421143 [debug] [Thread-2 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_demand_forecast"
+[0m16:48:58.422218 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_cold_chain_compliance"
+[0m16:48:58.423319 [debug] [Thread-3 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m16:48:58.424415 [debug] [Thread-2 (]: On model.eco_retail_analytics.gold_mart_demand_forecast: BEGIN
+[0m16:48:58.425596 [debug] [Thread-4 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_supplier_performance"
+[0m16:48:58.426139 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_cold_chain_compliance: BEGIN
+[0m16:48:58.427262 [debug] [Thread-3 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: BEGIN
+[0m16:48:58.428340 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m16:48:58.428929 [debug] [Thread-4 (]: On model.eco_retail_analytics.gold_mart_supplier_performance: BEGIN
+[0m16:48:58.429991 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:48:58.431156 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m16:48:58.432434 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m16:48:58.433711 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:48:58.435152 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m16:48:58.437001 [debug] [Thread-3 (]: SQL status: OK in 0.006 seconds
+[0m16:48:58.438536 [debug] [Thread-2 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_demand_forecast"
+[0m16:48:58.440609 [debug] [Thread-4 (]: SQL status: OK in 0.007 seconds
+[0m16:48:58.441608 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_cold_chain_compliance"
+[0m16:48:58.442609 [debug] [Thread-3 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m16:48:58.444520 [debug] [Thread-2 (]: On model.eco_retail_analytics.gold_mart_demand_forecast: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_demand_forecast"} */
+
+  
+    
+    
+
+    create  table
+      "warehouse"."warehouse_gold"."gold_mart_demand_forecast__dbt_tmp"
+  
+    as (
+      WITH daily_sales AS (
+    SELECT 
+        order_date_id AS date_id,
+        product_id,
+        store_id,
+        SUM(quantity) AS daily_sales_qty,
+        SUM(total_payment) AS daily_revenue,
+        COUNT(DISTINCT order_id) AS total_orders
+    FROM "warehouse"."warehouse_silver"."silver_fact_sales"
+    GROUP BY 1, 2, 3
+)
+
+SELECT 
+    d.date_id,
+    d.year,
+    d.month,
+    d.day_name,
+    ds.store_id,
+    ds.product_id,
+    p.category_name,
+    ds.daily_sales_qty,
+    ds.daily_revenue,
+    ds.total_orders
+FROM daily_sales ds
+JOIN "warehouse"."warehouse_silver"."silver_dim_date" d 
+    ON ds.date_id = d.date_id
+LEFT JOIN "warehouse"."warehouse_silver"."silver_dim_product" p
+    ON ds.product_id = p.product_id
+    );
+  
+  
+[0m16:48:58.445575 [debug] [Thread-4 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_supplier_performance"
+[0m16:48:58.446571 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_cold_chain_compliance: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_cold_chain_compliance"} */
+
+  
+    
+    
+
+    create  table
+      "warehouse"."warehouse_gold"."gold_mart_cold_chain_compliance__dbt_tmp"
+  
+    as (
+      WITH daily_telemetry AS (
+    SELECT 
+        date_id,
+        device_id,
+        AVG(temperature_c) AS avg_temp,
+        MAX(temperature_c) AS max_temp,
+        MIN(temperature_c) AS min_temp,
+        AVG(humidity_percentage) AS avg_humidity,
+        -- Menghitung berapa kali suhu melebihi batas aman (misal: > 5 derajat Celcius untuk Cold Chain)
+        SUM(CASE WHEN temperature_c > 5.0 THEN 1 ELSE 0 END) AS temperature_violations
+    FROM "warehouse"."warehouse_silver"."silver_fact_cold_chain"
+    GROUP BY 1, 2
+)
+
+SELECT 
+    date_id,
+    device_id,
+    ROUND(avg_temp, 2) AS avg_temp_c,
+    ROUND(max_temp, 2) AS max_temp_c,
+    ROUND(min_temp, 2) AS min_temp_c,
+    ROUND(avg_humidity, 2) AS avg_humidity_pct,
+    temperature_violations,
+    CASE 
+        WHEN temperature_violations > 0 THEN 'Non-Compliant'
+        ELSE 'Compliant'
+    END AS daily_compliance_status
+FROM daily_telemetry
+    );
+  
+  
+[0m16:48:58.448611 [debug] [Thread-3 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_food_waste_summary"} */
+
+  
+    
+    
+
+    create  table
+      "warehouse"."warehouse_gold"."gold_mart_food_waste_summary__dbt_tmp"
+  
+    as (
+      WITH inventory AS (
+    SELECT 
+        date_id,
+        product_id,
+        store_id,
+        SUM(stock_quantity) AS total_stock,
+        AVG(current_price) AS avg_price
+    FROM "warehouse"."warehouse_silver"."silver_fact_inventory"
+    GROUP BY 1, 2, 3
+),
+sales AS (
+    SELECT 
+        order_date_id AS date_id,
+        product_id,
+        store_id,
+        SUM(quantity) AS total_sold
+    FROM "warehouse"."warehouse_silver"."silver_fact_sales"
+    GROUP BY 1, 2, 3
+)
+
+SELECT 
+    i.date_id,
+    i.store_id,
+    i.product_id,
+    p.category_name,
+    i.total_stock,
+    COALESCE(s.total_sold, 0) AS total_sold,
+    -- Logika Food Waste: Stok yang tidak terjual
+    GREATEST(i.total_stock - COALESCE(s.total_sold, 0), 0) AS unsold_qty,
+    GREATEST(i.total_stock - COALESCE(s.total_sold, 0), 0) * i.avg_price AS potential_waste_value
+FROM inventory i
+LEFT JOIN sales s 
+    ON i.date_id = s.date_id 
+    AND i.product_id = s.product_id 
+    AND i.store_id = s.store_id
+LEFT JOIN "warehouse"."warehouse_silver"."silver_dim_product" p
+    ON i.product_id = p.product_id
+    );
+  
+  
+[0m16:48:58.453574 [debug] [Thread-4 (]: On model.eco_retail_analytics.gold_mart_supplier_performance: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_supplier_performance"} */
+
+  
+    
+    
+
+    create  table
+      "warehouse"."warehouse_gold"."gold_mart_supplier_performance__dbt_tmp"
+  
+    as (
+      WITH po_metrics AS (
+    SELECT 
+        -- Ekstrak bulan dan tahun untuk agregasi performa
+        DATE_TRUNC('month', order_date_id) AS performance_month,
+        delivery_status,
+        shipping_mode,
+        is_late_risk,
+        (actual_shipping_days - scheduled_shipping_days) AS delay_days
+    FROM "warehouse"."warehouse_silver"."silver_fact_purchase_order"
+)
+
+SELECT 
+    CAST(performance_month AS DATE) AS performance_month,
+    shipping_mode,
+    COUNT(*) AS total_shipments,
+    SUM(CASE WHEN is_late_risk = TRUE THEN 1 ELSE 0 END) AS total_late_shipments,
+    ROUND(SUM(CASE WHEN is_late_risk = TRUE THEN 1.0 ELSE 0.0 END) / COUNT(*) * 100, 2) AS late_delivery_rate_pct,
+    ROUND(AVG(CASE WHEN delay_days > 0 THEN delay_days ELSE 0 END), 2) AS avg_delay_days
+FROM po_metrics
+GROUP BY 1, 2
+    );
+  
+  
+[0m16:48:58.508406 [debug] [Thread-4 (]: SQL status: OK in 0.051 seconds
+[0m16:48:58.533053 [debug] [Thread-4 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_supplier_performance"
+[0m16:48:58.550078 [debug] [Thread-4 (]: On model.eco_retail_analytics.gold_mart_supplier_performance: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_supplier_performance"} */
+alter table "warehouse"."warehouse_gold"."gold_mart_supplier_performance__dbt_tmp" rename to "gold_mart_supplier_performance"
+[0m16:48:58.554106 [debug] [Thread-4 (]: SQL status: OK in 0.002 seconds
+[0m16:48:58.626833 [debug] [Thread-4 (]: On model.eco_retail_analytics.gold_mart_supplier_performance: COMMIT
+[0m16:48:58.636849 [debug] [Thread-4 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_supplier_performance"
+[0m16:48:58.628834 [debug] [Thread-1 (]: SQL status: OK in 0.173 seconds
+[0m16:48:58.646540 [debug] [Thread-4 (]: On model.eco_retail_analytics.gold_mart_supplier_performance: COMMIT
+[0m16:48:58.659946 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_cold_chain_compliance"
+[0m16:48:58.662949 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_cold_chain_compliance: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_cold_chain_compliance"} */
+alter table "warehouse"."warehouse_gold"."gold_mart_cold_chain_compliance__dbt_tmp" rename to "gold_mart_cold_chain_compliance"
+[0m16:48:58.666943 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:48:58.674043 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_cold_chain_compliance: COMMIT
+[0m16:48:58.676054 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_cold_chain_compliance"
+[0m16:48:58.678593 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_cold_chain_compliance: COMMIT
+[0m16:48:58.705502 [debug] [Thread-4 (]: SQL status: OK in 0.044 seconds
+[0m16:48:58.731444 [debug] [Thread-4 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_supplier_performance"
+[0m16:48:58.733458 [debug] [Thread-1 (]: SQL status: OK in 0.029 seconds
+[0m16:48:58.735217 [debug] [Thread-4 (]: On model.eco_retail_analytics.gold_mart_supplier_performance: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_supplier_performance"} */
+
+      drop table if exists "warehouse"."warehouse_gold"."gold_mart_supplier_performance__dbt_backup" cascade
+    
+[0m16:48:58.745791 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_cold_chain_compliance"
+[0m16:48:58.765442 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_cold_chain_compliance: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_cold_chain_compliance"} */
+
+      drop table if exists "warehouse"."warehouse_gold"."gold_mart_cold_chain_compliance__dbt_backup" cascade
+    
+[0m16:48:58.767201 [debug] [Thread-4 (]: SQL status: OK in 0.006 seconds
+[0m16:48:58.787095 [debug] [Thread-4 (]: On model.eco_retail_analytics.gold_mart_supplier_performance: Close
+[0m16:48:58.789110 [debug] [Thread-1 (]: SQL status: OK in 0.019 seconds
+[0m16:48:58.797173 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_cold_chain_compliance: Close
+[0m16:48:58.800955 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ea39c1ad-cd8a-4339-9d70-86c87eec2bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F32CFD58D0>]}
+[0m16:48:58.802972 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ea39c1ad-cd8a-4339-9d70-86c87eec2bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F32CE9B9D0>]}
+[0m16:48:58.807003 [info ] [Thread-4 (]: 4 of 5 OK created sql table model warehouse_gold.gold_mart_supplier_performance  [[32mOK[0m in 0.57s]
+[0m16:48:58.814801 [debug] [Thread-4 (]: Finished running node model.eco_retail_analytics.gold_mart_supplier_performance
+[0m16:48:58.809020 [info ] [Thread-1 (]: 1 of 5 OK created sql table model warehouse_gold.gold_mart_cold_chain_compliance  [[32mOK[0m in 0.59s]
+[0m16:48:58.839717 [debug] [Thread-1 (]: Finished running node model.eco_retail_analytics.gold_mart_cold_chain_compliance
+[0m16:48:59.490809 [debug] [Thread-3 (]: SQL status: OK in 1.035 seconds
+[0m16:48:59.514425 [debug] [Thread-3 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m16:48:59.516441 [debug] [Thread-3 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_food_waste_summary"} */
+alter table "warehouse"."warehouse_gold"."gold_mart_food_waste_summary__dbt_tmp" rename to "gold_mart_food_waste_summary"
+[0m16:48:59.525915 [debug] [Thread-3 (]: SQL status: OK in 0.005 seconds
+[0m16:48:59.536004 [debug] [Thread-3 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: COMMIT
+[0m16:48:59.540332 [debug] [Thread-3 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m16:48:59.542351 [debug] [Thread-3 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: COMMIT
+[0m16:49:00.699779 [debug] [Thread-2 (]: SQL status: OK in 2.250 seconds
+[0m16:49:00.707842 [debug] [Thread-2 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_demand_forecast"
+[0m16:49:00.709850 [debug] [Thread-2 (]: On model.eco_retail_analytics.gold_mart_demand_forecast: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_demand_forecast"} */
+alter table "warehouse"."warehouse_gold"."gold_mart_demand_forecast__dbt_tmp" rename to "gold_mart_demand_forecast"
+[0m16:49:00.711861 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m16:49:00.717526 [debug] [Thread-2 (]: On model.eco_retail_analytics.gold_mart_demand_forecast: COMMIT
+[0m16:49:00.719536 [debug] [Thread-2 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_demand_forecast"
+[0m16:49:00.719536 [debug] [Thread-2 (]: On model.eco_retail_analytics.gold_mart_demand_forecast: COMMIT
+[0m16:49:01.985934 [debug] [Thread-3 (]: SQL status: OK in 2.443 seconds
+[0m16:49:01.995877 [debug] [Thread-3 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m16:49:01.995877 [debug] [Thread-3 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_food_waste_summary"} */
+
+      drop table if exists "warehouse"."warehouse_gold"."gold_mart_food_waste_summary__dbt_backup" cascade
+    
+[0m16:49:01.995877 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m16:49:02.001659 [debug] [Thread-3 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: Close
+[0m16:49:02.001659 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ea39c1ad-cd8a-4339-9d70-86c87eec2bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F32CEB5050>]}
+[0m16:49:02.001659 [info ] [Thread-3 (]: 3 of 5 OK created sql table model warehouse_gold.gold_mart_food_waste_summary .. [[32mOK[0m in 3.79s]
+[0m16:49:02.001659 [debug] [Thread-3 (]: Finished running node model.eco_retail_analytics.gold_mart_food_waste_summary
+[0m16:49:02.001659 [debug] [Thread-4 (]: Began running node model.eco_retail_analytics.gold_mart_executive_kpi
+[0m16:49:02.001659 [info ] [Thread-4 (]: 5 of 5 START sql table model warehouse_gold.gold_mart_executive_kpi ............ [RUN]
+[0m16:49:02.001659 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.eco_retail_analytics.gold_mart_supplier_performance, now model.eco_retail_analytics.gold_mart_executive_kpi)
+[0m16:49:02.019223 [debug] [Thread-4 (]: Began compiling node model.eco_retail_analytics.gold_mart_executive_kpi
+[0m16:49:02.028285 [debug] [Thread-4 (]: Writing injected SQL for node "model.eco_retail_analytics.gold_mart_executive_kpi"
+[0m16:49:02.028285 [debug] [Thread-4 (]: Began executing node model.eco_retail_analytics.gold_mart_executive_kpi
+[0m16:49:02.037078 [debug] [Thread-4 (]: Writing runtime sql for node "model.eco_retail_analytics.gold_mart_executive_kpi"
+[0m16:49:02.037078 [debug] [Thread-4 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_executive_kpi"
+[0m16:49:02.046916 [debug] [Thread-4 (]: On model.eco_retail_analytics.gold_mart_executive_kpi: BEGIN
+[0m16:49:02.046916 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m16:49:02.046916 [debug] [Thread-4 (]: SQL status: OK in 0.002 seconds
+[0m16:49:02.052174 [debug] [Thread-4 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_executive_kpi"
+[0m16:49:02.054123 [debug] [Thread-4 (]: On model.eco_retail_analytics.gold_mart_executive_kpi: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_executive_kpi"} */
+
+  
+    
+    
+
+    create  table
+      "warehouse"."warehouse_gold"."gold_mart_executive_kpi__dbt_tmp"
+  
+    as (
+      WITH monthly_sales AS (
+    SELECT 
+        DATE_TRUNC('month', order_date_id) AS kpi_month,
+        SUM(total_payment) AS total_revenue,
+        SUM(quantity) AS total_items_sold
+    FROM "warehouse"."warehouse_silver"."silver_fact_sales"
+    GROUP BY 1
+),
+monthly_waste AS (
+    SELECT 
+        DATE_TRUNC('month', date_id) AS kpi_month,
+        SUM(potential_waste_value) AS total_potential_waste_value
+    FROM "warehouse"."warehouse_gold"."gold_mart_food_waste_summary"
+    GROUP BY 1
+),
+monthly_cold_chain AS (
+    SELECT 
+        DATE_TRUNC('month', date_id) AS kpi_month,
+        SUM(temperature_violations) AS total_temp_violations
+    FROM "warehouse"."warehouse_gold"."gold_mart_cold_chain_compliance"
+    GROUP BY 1
+)
+
+SELECT 
+    CAST(s.kpi_month AS DATE) AS kpi_month,
+    s.total_revenue,
+    s.total_items_sold,
+    COALESCE(w.total_potential_waste_value, 0) AS total_potential_waste_value,
+    COALESCE(c.total_temp_violations, 0) AS total_temp_violations
+FROM monthly_sales s
+LEFT JOIN monthly_waste w ON s.kpi_month = w.kpi_month
+LEFT JOIN monthly_cold_chain c ON s.kpi_month = c.kpi_month
+ORDER BY kpi_month DESC
+    );
+  
+  
+[0m16:49:02.076045 [debug] [Thread-4 (]: SQL status: OK in 0.021 seconds
+[0m16:49:02.084046 [debug] [Thread-4 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_executive_kpi"
+[0m16:49:02.086047 [debug] [Thread-4 (]: On model.eco_retail_analytics.gold_mart_executive_kpi: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_executive_kpi"} */
+alter table "warehouse"."warehouse_gold"."gold_mart_executive_kpi__dbt_tmp" rename to "gold_mart_executive_kpi"
+[0m16:49:02.088198 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m16:49:02.088198 [debug] [Thread-4 (]: On model.eco_retail_analytics.gold_mart_executive_kpi: COMMIT
+[0m16:49:02.088198 [debug] [Thread-4 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_executive_kpi"
+[0m16:49:02.088198 [debug] [Thread-4 (]: On model.eco_retail_analytics.gold_mart_executive_kpi: COMMIT
+[0m16:49:02.612175 [debug] [Thread-2 (]: SQL status: OK in 1.893 seconds
+[0m16:49:02.612175 [debug] [Thread-2 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_demand_forecast"
+[0m16:49:02.612175 [debug] [Thread-2 (]: On model.eco_retail_analytics.gold_mart_demand_forecast: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_demand_forecast"} */
+
+      drop table if exists "warehouse"."warehouse_gold"."gold_mart_demand_forecast__dbt_backup" cascade
+    
+[0m16:49:02.862762 [debug] [Thread-2 (]: SQL status: OK in 0.251 seconds
+[0m16:49:02.862762 [debug] [Thread-4 (]: SQL status: OK in 0.780 seconds
+[0m16:49:02.878483 [debug] [Thread-2 (]: On model.eco_retail_analytics.gold_mart_demand_forecast: Close
+[0m16:49:02.878483 [debug] [Thread-4 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_executive_kpi"
+[0m16:49:02.878483 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ea39c1ad-cd8a-4339-9d70-86c87eec2bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F32E096ED0>]}
+[0m16:49:02.878483 [debug] [Thread-4 (]: On model.eco_retail_analytics.gold_mart_executive_kpi: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_executive_kpi"} */
+
+      drop table if exists "warehouse"."warehouse_gold"."gold_mart_executive_kpi__dbt_backup" cascade
+    
+[0m16:49:02.878483 [info ] [Thread-2 (]: 2 of 5 OK created sql table model warehouse_gold.gold_mart_demand_forecast ..... [[32mOK[0m in 4.66s]
+[0m16:49:02.889509 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m16:49:02.889509 [debug] [Thread-2 (]: Finished running node model.eco_retail_analytics.gold_mart_demand_forecast
+[0m16:49:02.889509 [debug] [Thread-4 (]: On model.eco_retail_analytics.gold_mart_executive_kpi: Close
+[0m16:49:02.895870 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ea39c1ad-cd8a-4339-9d70-86c87eec2bee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F32CA7E990>]}
+[0m16:49:02.898553 [info ] [Thread-4 (]: 5 of 5 OK created sql table model warehouse_gold.gold_mart_executive_kpi ....... [[32mOK[0m in 0.89s]
+[0m16:49:02.902119 [debug] [Thread-4 (]: Finished running node model.eco_retail_analytics.gold_mart_executive_kpi
+[0m16:49:02.909244 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:49:02.911510 [debug] [MainThread]: On master: BEGIN
+[0m16:49:02.912565 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:49:02.914523 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m16:49:02.915522 [debug] [MainThread]: On master: COMMIT
+[0m16:49:02.916564 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:49:02.916564 [debug] [MainThread]: On master: COMMIT
+[0m16:49:02.920101 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:49:02.920101 [debug] [MainThread]: On master: Close
+[0m16:49:02.920101 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:49:02.925759 [debug] [MainThread]: Connection 'create_warehouse_warehouse_gold' was properly closed.
+[0m16:49:02.925759 [debug] [MainThread]: Connection 'list_warehouse_warehouse' was properly closed.
+[0m16:49:02.925759 [debug] [MainThread]: Connection 'list_warehouse_warehouse_silver' was properly closed.
+[0m16:49:02.925759 [debug] [MainThread]: Connection 'list_warehouse_warehouse_gold' was properly closed.
+[0m16:49:02.925759 [debug] [MainThread]: Connection 'list_warehouse_warehouse_bronze' was properly closed.
+[0m16:49:02.925759 [debug] [MainThread]: Connection 'model.eco_retail_analytics.gold_mart_cold_chain_compliance' was properly closed.
+[0m16:49:02.925759 [debug] [MainThread]: Connection 'model.eco_retail_analytics.gold_mart_demand_forecast' was properly closed.
+[0m16:49:02.925759 [debug] [MainThread]: Connection 'model.eco_retail_analytics.gold_mart_food_waste_summary' was properly closed.
+[0m16:49:02.925759 [debug] [MainThread]: Connection 'model.eco_retail_analytics.gold_mart_executive_kpi' was properly closed.
+[0m16:49:02.936105 [info ] [MainThread]: 
+[0m16:49:02.936847 [info ] [MainThread]: Finished running 5 table models in 0 hours 0 minutes and 5.41 seconds (5.41s).
+[0m16:49:02.936847 [debug] [MainThread]: Command end result
+[0m16:49:03.013107 [debug] [MainThread]: Wrote artifact WritableManifest to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\manifest.json
+[0m16:49:03.017145 [debug] [MainThread]: Wrote artifact SemanticManifest to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\semantic_manifest.json
+[0m16:49:03.028851 [debug] [MainThread]: Wrote artifact RunExecutionResult to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\run_results.json
+[0m16:49:03.029817 [info ] [MainThread]: 
+[0m16:49:03.031813 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:49:03.032865 [info ] [MainThread]: 
+[0m16:49:03.034879 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m16:49:03.038799 [debug] [MainThread]: Command `dbt run` succeeded at 16:49:03.037754 after 7.44 seconds
+[0m16:49:03.040503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F324465B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F32C3DF4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3246AEE10>]}
+[0m16:49:03.042670 [debug] [MainThread]: Flushing usage events
+[0m16:49:05.193989 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:01:07.029425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5813D0D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5814A3510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5814A3650>]}
+
+
+============================== 17:01:07.044637 | 72fbb53d-3e1a-48f3-a953-b1ecaf230847 ==============================
+[0m17:01:07.044637 [info ] [MainThread]: Running with dbt=1.11.8
+[0m17:01:07.044637 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'E:\\Tugas\\S4\\KBA\\project\\KBA-Eco-Retail-Analytics', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run --select gold_mart_food_waste_summary', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'E:\\Tugas\\S4\\KBA\\project\\KBA-Eco-Retail-Analytics\\logs'}
+[0m17:01:07.369430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '72fbb53d-3e1a-48f3-a953-b1ecaf230847', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5814FDE50>]}
+[0m17:01:07.464818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '72fbb53d-3e1a-48f3-a953-b1ecaf230847', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5FCB04850>]}
+[0m17:01:07.464818 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m17:01:07.866187 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m17:01:08.096353 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m17:01:08.103928 [debug] [MainThread]: Partial parsing: updated file: eco_retail_analytics://models\gold\gold_mart_food_waste_summary.sql
+[0m17:01:08.478914 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '72fbb53d-3e1a-48f3-a953-b1ecaf230847', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C581E24610>]}
+[0m17:01:08.585069 [debug] [MainThread]: Wrote artifact WritableManifest to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\manifest.json
+[0m17:01:08.585069 [debug] [MainThread]: Wrote artifact SemanticManifest to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\semantic_manifest.json
+[0m17:01:08.616676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '72fbb53d-3e1a-48f3-a953-b1ecaf230847', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5819B8110>]}
+[0m17:01:08.617676 [info ] [MainThread]: Found 20 models, 2 data tests, 5 sources, 475 macros
+[0m17:01:08.618677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '72fbb53d-3e1a-48f3-a953-b1ecaf230847', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5819C8DD0>]}
+[0m17:01:08.621715 [info ] [MainThread]: 
+[0m17:01:08.623203 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:01:08.624199 [info ] [MainThread]: 
+[0m17:01:08.625787 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:01:08.628133 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse'
+[0m17:01:08.722193 [debug] [ThreadPool]: Using duckdb connection "list_warehouse"
+[0m17:01:08.722193 [debug] [ThreadPool]: On list_warehouse: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"warehouse"'
+    
+  
+  
+[0m17:01:08.722193 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:01:08.755192 [debug] [ThreadPool]: SQL status: OK in 0.025 seconds
+[0m17:01:08.757200 [debug] [ThreadPool]: On list_warehouse: Close
+[0m17:01:08.759208 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_warehouse, now create_warehouse_warehouse_gold)
+[0m17:01:08.759208 [debug] [ThreadPool]: Creating schema "database: "warehouse"
+schema: "warehouse_gold"
+"
+[0m17:01:08.767653 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_warehouse_gold"
+[0m17:01:08.768653 [debug] [ThreadPool]: On create_warehouse_warehouse_gold: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "create_warehouse_warehouse_gold"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='warehouse'
+        and type='sqlite'
+    
+  
+[0m17:01:08.768653 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:01:08.770653 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:01:08.772004 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_warehouse_gold"
+[0m17:01:08.773129 [debug] [ThreadPool]: On create_warehouse_warehouse_gold: BEGIN
+[0m17:01:08.774093 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:01:08.775093 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_warehouse_gold"
+[0m17:01:08.775093 [debug] [ThreadPool]: On create_warehouse_warehouse_gold: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "create_warehouse_warehouse_gold"} */
+
+    
+    
+        create schema if not exists "warehouse"."warehouse_gold"
+    
+[0m17:01:08.776129 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:01:08.777135 [debug] [ThreadPool]: On create_warehouse_warehouse_gold: COMMIT
+[0m17:01:08.778134 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_warehouse_gold"
+[0m17:01:08.779092 [debug] [ThreadPool]: On create_warehouse_warehouse_gold: COMMIT
+[0m17:01:08.779092 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:01:08.780129 [debug] [ThreadPool]: On create_warehouse_warehouse_gold: Close
+[0m17:01:08.787457 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_warehouse_silver'
+[0m17:01:08.788467 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_warehouse'
+[0m17:01:08.796103 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_silver"
+[0m17:01:08.796612 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_warehouse_gold'
+[0m17:01:08.796612 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_warehouse_bronze'
+[0m17:01:08.796612 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse"
+[0m17:01:08.796612 [debug] [ThreadPool]: On list_warehouse_warehouse_silver: BEGIN
+[0m17:01:08.796612 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_gold"
+[0m17:01:08.804417 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_bronze"
+[0m17:01:08.804417 [debug] [ThreadPool]: On list_warehouse_warehouse: BEGIN
+[0m17:01:08.804417 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:01:08.804417 [debug] [ThreadPool]: On list_warehouse_warehouse_gold: BEGIN
+[0m17:01:08.804417 [debug] [ThreadPool]: On list_warehouse_warehouse_bronze: BEGIN
+[0m17:01:08.804417 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:01:08.804417 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m17:01:08.804417 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:01:08.804417 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:01:08.804417 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m17:01:08.804417 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_silver"
+[0m17:01:08.804417 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m17:01:08.804417 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m17:01:08.804417 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse"
+[0m17:01:08.804417 [debug] [ThreadPool]: On list_warehouse_warehouse_silver: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_warehouse_silver"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'warehouse_silver'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m17:01:08.804417 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_gold"
+[0m17:01:08.804417 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse_bronze"
+[0m17:01:08.804417 [debug] [ThreadPool]: On list_warehouse_warehouse: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_warehouse"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'warehouse'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m17:01:08.820246 [debug] [ThreadPool]: On list_warehouse_warehouse_gold: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_warehouse_gold"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'warehouse_gold'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m17:01:08.820246 [debug] [ThreadPool]: On list_warehouse_warehouse_bronze: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_warehouse_bronze"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'warehouse_bronze'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m17:01:08.836701 [debug] [ThreadPool]: SQL status: OK in 0.020 seconds
+[0m17:01:08.836701 [debug] [ThreadPool]: SQL status: OK in 0.020 seconds
+[0m17:01:08.836701 [debug] [ThreadPool]: SQL status: OK in 0.025 seconds
+[0m17:01:08.836701 [debug] [ThreadPool]: SQL status: OK in 0.022 seconds
+[0m17:01:08.836701 [debug] [ThreadPool]: On list_warehouse_warehouse: ROLLBACK
+[0m17:01:08.836701 [debug] [ThreadPool]: On list_warehouse_warehouse_bronze: ROLLBACK
+[0m17:01:08.836701 [debug] [ThreadPool]: On list_warehouse_warehouse_silver: ROLLBACK
+[0m17:01:08.851960 [debug] [ThreadPool]: On list_warehouse_warehouse_gold: ROLLBACK
+[0m17:01:08.851960 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_warehouse'
+[0m17:01:08.851960 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_warehouse_bronze'
+[0m17:01:08.851960 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_warehouse_silver'
+[0m17:01:08.851960 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_warehouse_gold'
+[0m17:01:08.851960 [debug] [ThreadPool]: On list_warehouse_warehouse: Close
+[0m17:01:08.851960 [debug] [ThreadPool]: On list_warehouse_warehouse_bronze: Close
+[0m17:01:08.851960 [debug] [ThreadPool]: On list_warehouse_warehouse_silver: Close
+[0m17:01:08.851960 [debug] [ThreadPool]: On list_warehouse_warehouse_gold: Close
+[0m17:01:08.851960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '72fbb53d-3e1a-48f3-a953-b1ecaf230847', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5814E0650>]}
+[0m17:01:08.851960 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:01:08.851960 [debug] [MainThread]: On master: BEGIN
+[0m17:01:08.867796 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:01:08.867796 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:01:08.867796 [debug] [MainThread]: On master: COMMIT
+[0m17:01:08.867796 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:01:08.867796 [debug] [MainThread]: On master: COMMIT
+[0m17:01:08.867796 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:01:08.867796 [debug] [MainThread]: On master: Close
+[0m17:01:08.867796 [debug] [Thread-1 (]: Began running node model.eco_retail_analytics.gold_mart_food_waste_summary
+[0m17:01:08.867796 [info ] [Thread-1 (]: 1 of 1 START sql table model warehouse_gold.gold_mart_food_waste_summary ....... [RUN]
+[0m17:01:08.867796 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.eco_retail_analytics.gold_mart_food_waste_summary'
+[0m17:01:08.867796 [debug] [Thread-1 (]: Began compiling node model.eco_retail_analytics.gold_mart_food_waste_summary
+[0m17:01:08.883477 [debug] [Thread-1 (]: Writing injected SQL for node "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m17:01:08.883477 [debug] [Thread-1 (]: Began executing node model.eco_retail_analytics.gold_mart_food_waste_summary
+[0m17:01:08.972038 [debug] [Thread-1 (]: Writing runtime sql for node "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m17:01:08.972038 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m17:01:08.972038 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: BEGIN
+[0m17:01:08.972038 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:01:08.972038 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m17:01:08.972038 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m17:01:08.987954 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_food_waste_summary"} */
+
+  
+    
+    
+
+    create  table
+      "warehouse"."warehouse_gold"."gold_mart_food_waste_summary__dbt_tmp"
+  
+    as (
+      WITH inventory AS (
+    SELECT 
+        date_id,
+        product_id,
+        store_id,
+        SUM(stock_quantity) AS total_stock,
+        AVG(current_price) AS avg_price
+    FROM "warehouse"."warehouse_silver"."silver_fact_inventory"
+    GROUP BY 1, 2, 3
+),
+sales AS (
+    SELECT 
+        order_date_id AS date_id,
+        product_id,
+        store_id,
+        SUM(quantity) AS total_sold
+    FROM "warehouse"."warehouse_silver"."silver_fact_sales"
+    GROUP BY 1, 2, 3
+)
+
+SELECT 
+    i.date_id,
+    i.store_id,
+    i.product_id,
+    p.category_name,
+    i.total_stock,
+    COALESCE(s.total_sold, 0) AS total_sold,
+    GREATEST(i.total_stock - COALESCE(s.total_sold, 0), 0) AS unsold_qty,
+    
+    -- Kolom tambahan sesuai permintaan tugas:
+    CASE 
+        WHEN i.total_stock = 0 THEN 0.0
+        ELSE ROUND((GREATEST(i.total_stock - COALESCE(s.total_sold, 0), 0) * 100.0) / i.total_stock, 2)
+    END AS waste_rate_pct,
+    
+    CASE 
+        WHEN i.total_stock = 0 THEN 'No Stock'
+        WHEN (GREATEST(i.total_stock - COALESCE(s.total_sold, 0), 0) * 100.0) / i.total_stock > 20 THEN 'High Waste Risk'
+        WHEN (GREATEST(i.total_stock - COALESCE(s.total_sold, 0), 0) * 100.0) / i.total_stock > 5 THEN 'Moderate Risk'
+        ELSE 'Healthy'
+    END AS waste_rate_status
+
+FROM inventory i
+LEFT JOIN sales s 
+    ON i.date_id = s.date_id 
+    AND i.product_id = s.product_id 
+    AND i.store_id = s.store_id
+LEFT JOIN "warehouse"."warehouse_silver"."silver_dim_product" p
+    ON i.product_id = p.product_id
+    );
+  
+  
+[0m17:01:09.622612 [debug] [Thread-1 (]: SQL status: OK in 0.642 seconds
+[0m17:01:09.638962 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m17:01:09.638962 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_food_waste_summary"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'warehouse_gold'
+      AND table_name = 'gold_mart_food_waste_summary'
+  
+[0m17:01:09.638962 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:01:09.638962 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m17:01:09.638962 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_food_waste_summary"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'warehouse_gold'
+      AND table_name = 'gold_mart_food_waste_summary'
+  
+[0m17:01:09.638962 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:01:09.670456 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m17:01:09.670456 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_food_waste_summary"} */
+alter table "warehouse"."warehouse_gold"."gold_mart_food_waste_summary" rename to "gold_mart_food_waste_summary__dbt_backup"
+[0m17:01:09.670456 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:01:09.670456 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m17:01:09.670456 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_food_waste_summary"} */
+alter table "warehouse"."warehouse_gold"."gold_mart_food_waste_summary__dbt_tmp" rename to "gold_mart_food_waste_summary"
+[0m17:01:09.670456 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:01:09.710108 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: COMMIT
+[0m17:01:09.712107 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m17:01:09.713106 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: COMMIT
+[0m17:01:12.714416 [debug] [Thread-1 (]: SQL status: OK in 3.010 seconds
+[0m17:01:12.743148 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_mart_food_waste_summary"
+[0m17:01:12.743148 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_mart_food_waste_summary"} */
+
+      drop table if exists "warehouse"."warehouse_gold"."gold_mart_food_waste_summary__dbt_backup" cascade
+    
+[0m17:01:12.921093 [debug] [Thread-1 (]: SQL status: OK in 0.185 seconds
+[0m17:01:12.931025 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_mart_food_waste_summary: Close
+[0m17:01:12.939847 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '72fbb53d-3e1a-48f3-a953-b1ecaf230847', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5819AA510>]}
+[0m17:01:12.941858 [info ] [Thread-1 (]: 1 of 1 OK created sql table model warehouse_gold.gold_mart_food_waste_summary .. [[32mOK[0m in 4.07s]
+[0m17:01:12.943867 [debug] [Thread-1 (]: Finished running node model.eco_retail_analytics.gold_mart_food_waste_summary
+[0m17:01:12.945874 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:01:12.947880 [debug] [MainThread]: On master: BEGIN
+[0m17:01:12.947880 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:01:12.947880 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:01:12.947880 [debug] [MainThread]: On master: COMMIT
+[0m17:01:12.947880 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:01:12.951945 [debug] [MainThread]: On master: COMMIT
+[0m17:01:12.953434 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:01:12.955441 [debug] [MainThread]: On master: Close
+[0m17:01:12.957442 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:01:12.958443 [debug] [MainThread]: Connection 'create_warehouse_warehouse_gold' was properly closed.
+[0m17:01:12.960865 [debug] [MainThread]: Connection 'list_warehouse_warehouse_silver' was properly closed.
+[0m17:01:12.963634 [debug] [MainThread]: Connection 'list_warehouse_warehouse' was properly closed.
+[0m17:01:12.964201 [debug] [MainThread]: Connection 'list_warehouse_warehouse_gold' was properly closed.
+[0m17:01:12.964815 [debug] [MainThread]: Connection 'list_warehouse_warehouse_bronze' was properly closed.
+[0m17:01:12.965392 [debug] [MainThread]: Connection 'model.eco_retail_analytics.gold_mart_food_waste_summary' was properly closed.
+[0m17:01:12.966546 [info ] [MainThread]: 
+[0m17:01:12.967650 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 4.34 seconds (4.34s).
+[0m17:01:12.968884 [debug] [MainThread]: Command end result
+[0m17:01:13.011947 [debug] [MainThread]: Wrote artifact WritableManifest to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\manifest.json
+[0m17:01:13.011947 [debug] [MainThread]: Wrote artifact SemanticManifest to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\semantic_manifest.json
+[0m17:01:13.021198 [debug] [MainThread]: Wrote artifact RunExecutionResult to E:\Tugas\S4\KBA\project\KBA-Eco-Retail-Analytics\target\run_results.json
+[0m17:01:13.021198 [info ] [MainThread]: 
+[0m17:01:13.021198 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:01:13.021198 [info ] [MainThread]: 
+[0m17:01:13.021198 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m17:01:13.021198 [debug] [MainThread]: Command `dbt run` succeeded at 17:01:13.021198 after 6.11 seconds
+[0m17:01:13.021198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5F9625A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5F976ED10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5F976EC90>]}
+[0m17:01:13.021198 [debug] [MainThread]: Flushing usage events
+[0m17:01:14.870486 [debug] [MainThread]: An error was encountered while trying to flush usage events

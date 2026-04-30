@@ -12,7 +12,7 @@ for schema in schemas:
 
 # Skema bawaan (default) di DuckDB biasanya bernama 'main'
 # Anda bisa menggantinya dengan 'bronze', 'silver', atau 'gold' jika sudah dibuat
-schema_to_check = 'bronze' 
+schema_to_check = 'gold' 
 
 print(f"\n=== DAFTAR TABEL DI SKEMA '{schema_to_check}' ===")
 tables = conn.execute(f"""
