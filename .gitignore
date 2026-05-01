@@ -4,6 +4,7 @@
 # Mengabaikan folder database dan isinya
 data/*.db
 
+
 # Mengabaikan dataset mentah berukuran besar
 data/*.csv
 
