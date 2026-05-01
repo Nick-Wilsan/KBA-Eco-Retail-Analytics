@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: eco_retail_bronze
+    schema: bronze
+    description: "Data mentah yang ditarik langsung dari CSV Kaggle"
+    tables:
+      - name: instacart_grocery
+      - name: retail_data
+      - name: m5_forcasting
+      - name: iot_telemetry
+      - name: SupplyChain

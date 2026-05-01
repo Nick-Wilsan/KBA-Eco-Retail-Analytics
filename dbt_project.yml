@@ -1,18 +1,41 @@
 # dbt_project.yml
 
+# 1. Parameter Wajib (Identitas Proyek)
+name: 'eco_retail_analytics'
+version: '1.0.0'
+config-version: 2
+
+# 2. Koneksi ke profiles.yml
+# Harus sama persis dengan nama root yang ada di profiles.yml Anda
+profile: 'eco_retail_analytics'
+
+# 3. Struktur Direktori Default dbt
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"  # Direktori tempat dbt menyimpan hasil kompilasi SQL
+clean-targets:         # Direktori yang dibersihkan saat menjalankan `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+# 4. Konfigurasi Model (Arsitektur Medallion)
 models:
   eco_retail_analytics:
-    # Semua model di folder bronze akan masuk ke skema 'bronze'
+    # Konfigurasi untuk folder models/bronze/
     bronze:
       +schema: bronze
-      +materialized: view # Disarankan view untuk raw data
+      +materialized: view
 
-    # Semua model di folder silver akan masuk ke skema 'silver'
+    # Konfigurasi untuk folder models/silver/
     silver:
       +schema: silver
       +materialized: table
 
-    # Semua model di folder gold akan masuk ke skema 'gold'
+    # Konfigurasi untuk folder models/gold/
     gold:
       +schema: gold
-      +materialized: table # Disarankan table agar Metabase bisa query dengan cepat
+      +materialized: table
