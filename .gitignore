@@ -3,7 +3,6 @@
 
 # Mengabaikan folder database dan isinya
 data/*.db
-metabase-data/
 
 # Mengabaikan dataset mentah berukuran besar
 data/*.csv
