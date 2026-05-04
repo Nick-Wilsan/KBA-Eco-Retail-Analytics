@@ -7,7 +7,9 @@
       "warehouse"."silver"."silver_fact_inventory__dbt_tmp"
   
     as (
-      WITH inventory_data AS (
+      
+
+WITH inventory_data AS (
     SELECT
         id AS inventory_record_id,
         CAST(item_id AS VARCHAR) AS product_id,

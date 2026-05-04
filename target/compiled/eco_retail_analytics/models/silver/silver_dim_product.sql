@@ -1,3 +1,5 @@
+
+
 WITH retail_products AS (
     SELECT 
         CAST(product_id AS VARCHAR) AS product_id,

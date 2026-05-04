@@ -1,3 +1,5 @@
+
+
 WITH inventory_data AS (
     SELECT
         id AS inventory_record_id,

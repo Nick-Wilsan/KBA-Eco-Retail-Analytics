@@ -7,7 +7,9 @@
       "warehouse"."silver"."silver_fact_sales__dbt_tmp"
   
     as (
-      WITH sales_data AS (
+      
+
+WITH sales_data AS (
     SELECT
         CAST(order_item_id AS VARCHAR) AS order_item_id,
         CAST(order_id AS VARCHAR) AS order_id,

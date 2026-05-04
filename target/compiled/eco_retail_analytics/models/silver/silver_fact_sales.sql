@@ -1,3 +1,5 @@
+
+
 WITH sales_data AS (
     SELECT
         CAST(order_item_id AS VARCHAR) AS order_item_id,

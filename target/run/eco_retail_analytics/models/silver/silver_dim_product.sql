@@ -7,7 +7,9 @@
       "warehouse"."silver"."silver_dim_product__dbt_tmp"
   
     as (
-      WITH retail_products AS (
+      
+
+WITH retail_products AS (
     SELECT 
         CAST(product_id AS VARCHAR) AS product_id,
         category_name,
