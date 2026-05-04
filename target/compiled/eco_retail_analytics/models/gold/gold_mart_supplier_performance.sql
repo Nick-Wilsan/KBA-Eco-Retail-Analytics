@@ -6,7 +6,7 @@ WITH po_metrics AS (
         shipping_mode,
         is_late_risk,
         (actual_shipping_days - scheduled_shipping_days) AS delay_days
-    FROM "warehouse"."warehouse_silver"."silver_fact_purchase_order"
+    FROM "warehouse"."silver"."silver_fact_purchase_order"
 )
 
 SELECT 

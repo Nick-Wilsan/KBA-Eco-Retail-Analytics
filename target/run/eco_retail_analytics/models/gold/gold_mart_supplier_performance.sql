@@ -4,7 +4,7 @@
     
 
     create  table
-      "warehouse"."warehouse_gold"."gold_mart_supplier_performance__dbt_tmp"
+      "warehouse"."gold"."gold_mart_supplier_performance__dbt_tmp"
   
     as (
       WITH po_metrics AS (
@@ -15,7 +15,7 @@
         shipping_mode,
         is_late_risk,
         (actual_shipping_days - scheduled_shipping_days) AS delay_days
-    FROM "warehouse"."warehouse_silver"."silver_fact_purchase_order"
+    FROM "warehouse"."silver"."silver_fact_purchase_order"
 )
 
 SELECT 

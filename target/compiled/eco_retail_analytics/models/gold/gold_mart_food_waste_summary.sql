@@ -5,7 +5,7 @@ WITH inventory AS (
         store_id,
         SUM(stock_quantity) AS total_stock,
         AVG(current_price) AS avg_price
-    FROM "warehouse"."warehouse_silver"."silver_fact_inventory"
+    FROM "warehouse"."silver"."silver_fact_inventory"
     GROUP BY 1, 2, 3
 ),
 sales AS (
@@ -14,7 +14,7 @@ sales AS (
         product_id,
         store_id,
         SUM(quantity) AS total_sold
-    FROM "warehouse"."warehouse_silver"."silver_fact_sales"
+    FROM "warehouse"."silver"."silver_fact_sales"
     GROUP BY 1, 2, 3
 )
 
@@ -25,7 +25,10 @@ SELECT
     p.category_name,
     i.total_stock,
     COALESCE(s.total_sold, 0) AS total_sold,
+    
+    -- Metrik Kuantitatif & Finansial (Dibutuhkan oleh tabel Executive KPI)
     GREATEST(i.total_stock - COALESCE(s.total_sold, 0), 0) AS unsold_qty,
+    GREATEST(i.total_stock - COALESCE(s.total_sold, 0), 0) * i.avg_price AS potential_waste_value,
     
     -- Kolom tambahan sesuai permintaan tugas:
     CASE 
@@ -45,5 +48,5 @@ LEFT JOIN sales s
     ON i.date_id = s.date_id 
     AND i.product_id = s.product_id 
     AND i.store_id = s.store_id
-LEFT JOIN "warehouse"."warehouse_silver"."silver_dim_product" p
+LEFT JOIN "warehouse"."silver"."silver_dim_product" p
     ON i.product_id = p.product_id

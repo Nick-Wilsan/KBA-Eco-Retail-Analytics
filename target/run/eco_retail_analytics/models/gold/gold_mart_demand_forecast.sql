@@ -4,7 +4,7 @@
     
 
     create  table
-      "warehouse"."warehouse_gold"."gold_mart_demand_forecast__dbt_tmp"
+      "warehouse"."gold"."gold_mart_demand_forecast__dbt_tmp"
   
     as (
       WITH daily_sales AS (
@@ -15,7 +15,7 @@
         SUM(quantity) AS daily_sales_qty,
         SUM(total_payment) AS daily_revenue,
         COUNT(DISTINCT order_id) AS total_orders
-    FROM "warehouse"."warehouse_silver"."silver_fact_sales"
+    FROM "warehouse"."silver"."silver_fact_sales"
     GROUP BY 1, 2, 3
 )
 
@@ -31,9 +31,9 @@ SELECT
     ds.daily_revenue,
     ds.total_orders
 FROM daily_sales ds
-JOIN "warehouse"."warehouse_silver"."silver_dim_date" d 
+JOIN "warehouse"."silver"."silver_dim_date" d 
     ON ds.date_id = d.date_id
-LEFT JOIN "warehouse"."warehouse_silver"."silver_dim_product" p
+LEFT JOIN "warehouse"."silver"."silver_dim_product" p
     ON ds.product_id = p.product_id
     );
   

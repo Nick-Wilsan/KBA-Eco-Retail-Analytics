@@ -4,7 +4,7 @@
     
 
     create  table
-      "warehouse"."warehouse_silver"."silver_fact_inventory__dbt_tmp"
+      "warehouse"."silver"."silver_fact_inventory__dbt_tmp"
   
     as (
       WITH inventory_data AS (

@@ -3,21 +3,21 @@ WITH monthly_sales AS (
         DATE_TRUNC('month', order_date_id) AS kpi_month,
         SUM(total_payment) AS total_revenue,
         SUM(quantity) AS total_items_sold
-    FROM "warehouse"."warehouse_silver"."silver_fact_sales"
+    FROM "warehouse"."silver"."silver_fact_sales"
     GROUP BY 1
 ),
 monthly_waste AS (
     SELECT 
         DATE_TRUNC('month', date_id) AS kpi_month,
         SUM(potential_waste_value) AS total_potential_waste_value
-    FROM "warehouse"."warehouse_gold"."gold_mart_food_waste_summary"
+    FROM "warehouse"."gold"."gold_mart_food_waste_summary"
     GROUP BY 1
 ),
 monthly_cold_chain AS (
     SELECT 
         DATE_TRUNC('month', date_id) AS kpi_month,
         SUM(temperature_violations) AS total_temp_violations
-    FROM "warehouse"."warehouse_gold"."gold_mart_cold_chain_compliance"
+    FROM "warehouse"."gold"."gold_mart_cold_chain_compliance"
     GROUP BY 1
 )
 

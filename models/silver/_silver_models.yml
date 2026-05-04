@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: silver_fact_cold_chain
+    columns:
+      - name: temperature_c
+        tests:
+          # Ekspektasi: Suhu harus berada di rentang fisik yang masuk akal (mendeteksi sensor rusak)
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -50.0
+              max_value: 60.0
+              
+      - name: humidity_percentage
+        tests:
+          # Ekspektasi: Kelembapan persentase pasti antara 0 dan 100
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100

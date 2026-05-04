@@ -3,10 +3,68 @@ version: 2
 sources:
   - name: eco_retail_bronze
     schema: bronze
-    description: "Data mentah yang ditarik langsung dari CSV Kaggle"
+    description: "Data mentah yang ditarik langsung dari CSV"
     tables:
+      
+      # 1. Instacart Grocery
       - name: instacart_grocery
+        tests:
+          - dbt_expectations.expect_table_row_count_to_be_between:
+              min_value: 1000
+              max_value: 5000000
+        columns:
+          - name: order_id
+            tests:
+              - not_null
+
+      # 2. Retail Data
       - name: retail_data
+        tests:
+          - dbt_expectations.expect_table_row_count_to_be_between:
+              min_value: 100
+              max_value: 5000000
+        columns:
+          - name: order_item_id
+            tests:
+              - not_null
+
+      # 3. M5 Forecasting
       - name: m5_forcasting
+        tests:
+          - dbt_expectations.expect_table_row_count_to_be_between:
+              min_value: 1000
+              max_value: 10000000
+        columns:
+          - name: id
+            tests:
+              - not_null
+
+      # 4. IoT Telemetry
       - name: iot_telemetry
+        tests:
+          - dbt_expectations.expect_table_row_count_to_be_between:
+              min_value: 100
+              max_value: 5000000
+        columns:
+          - name: timestamp
+            tests:
+              - not_null # Sensor tidak boleh mengirim data tanpa timestamp
+          - name: device_mac
+            tests:
+              - not_null
+
+      # 5. Supply Chain
       - name: SupplyChain
+        tests:
+          - dbt_expectations.expect_table_row_count_to_be_between:
+              min_value: 100
+              max_value: 5000000
+        columns:
+          # Menggunakan tanda kutip ganda ("") karena nama kolom asli di CSV mengandung spasi
+          - name: '"Order Item Id"' 
+            tests:
+              - not_null
+              - unique
+          - name: order_id
+            tests:
+              - not_null

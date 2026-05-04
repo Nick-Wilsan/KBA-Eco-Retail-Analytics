@@ -25,7 +25,10 @@ SELECT
     p.category_name,
     i.total_stock,
     COALESCE(s.total_sold, 0) AS total_sold,
+    
+    -- Metrik Kuantitatif & Finansial (Dibutuhkan oleh tabel Executive KPI)
     GREATEST(i.total_stock - COALESCE(s.total_sold, 0), 0) AS unsold_qty,
+    GREATEST(i.total_stock - COALESCE(s.total_sold, 0), 0) * i.avg_price AS potential_waste_value,
     
     -- Kolom tambahan sesuai permintaan tugas:
     CASE 

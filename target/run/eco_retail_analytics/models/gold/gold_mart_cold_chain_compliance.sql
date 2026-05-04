@@ -4,7 +4,7 @@
     
 
     create  table
-      "warehouse"."warehouse_gold"."gold_mart_cold_chain_compliance__dbt_tmp"
+      "warehouse"."gold"."gold_mart_cold_chain_compliance__dbt_tmp"
   
     as (
       WITH daily_telemetry AS (
@@ -17,7 +17,7 @@
         AVG(humidity_percentage) AS avg_humidity,
         -- Menghitung berapa kali suhu melebihi batas aman (misal: > 5 derajat Celcius untuk Cold Chain)
         SUM(CASE WHEN temperature_c > 5.0 THEN 1 ELSE 0 END) AS temperature_violations
-    FROM "warehouse"."warehouse_silver"."silver_fact_cold_chain"
+    FROM "warehouse"."silver"."silver_fact_cold_chain"
     GROUP BY 1, 2
 )
 

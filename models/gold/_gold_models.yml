@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: gold_mart_food_waste_summary
+    columns:
+      - name: waste_rate_pct
+        tests:
+          # Ekspektasi: Persentase waste tidak mungkin negatif dan tidak mungkin lebih dari 100%
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0.0
+              max_value: 100.0
+      
+      - name: waste_rate_status
+        tests:
+          # Ekspektasi: Status hanya boleh berisi teks-teks yang sudah kita tetapkan di SQL
+          - dbt_expectations.expect_column_values_to_be_in_set:
+              value_set: ['Healthy', 'Moderate Risk', 'High Waste Risk', 'No Stock']
