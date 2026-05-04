@@ -15,3 +15,4 @@ WITH po_data AS (
 )
 
 SELECT * FROM po_data
+ORDER BY order_date_id

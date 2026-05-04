@@ -59,6 +59,7 @@ LEFT JOIN sales s
     AND i.store_id = s.store_id
 LEFT JOIN "warehouse"."silver"."silver_dim_product" p
     ON i.product_id = p.product_id
+ORDER BY i.date_id, i.store_id
     );
   
   

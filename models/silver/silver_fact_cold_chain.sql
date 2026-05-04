@@ -16,3 +16,4 @@ WITH iot_data AS (
 )
 
 SELECT * FROM iot_data
+ORDER BY telemetry_timestamp

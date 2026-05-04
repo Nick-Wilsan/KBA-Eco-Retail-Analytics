@@ -20,6 +20,7 @@
 )
 
 SELECT * FROM inventory_data
+ORDER BY date_id
     );
   
   

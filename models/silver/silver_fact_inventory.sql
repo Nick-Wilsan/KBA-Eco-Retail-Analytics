@@ -11,3 +11,4 @@ WITH inventory_data AS (
 )
 
 SELECT * FROM inventory_data
+ORDER BY date_id

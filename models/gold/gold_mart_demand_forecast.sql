@@ -26,4 +26,4 @@ JOIN {{ ref('silver_dim_date') }} d
     ON ds.date_id = d.date_id
 LEFT JOIN {{ ref('silver_dim_product') }} p
     ON ds.product_id = p.product_id
-    
+ORDER BY ds.date_id

@@ -16,3 +16,4 @@ WITH sales_data AS (
 )
 
 SELECT * FROM sales_data
+ORDER BY order_date_id

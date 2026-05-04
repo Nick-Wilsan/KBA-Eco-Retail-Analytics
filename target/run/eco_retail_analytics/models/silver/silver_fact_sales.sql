@@ -25,6 +25,7 @@
 )
 
 SELECT * FROM sales_data
+ORDER BY order_date_id
     );
   
   

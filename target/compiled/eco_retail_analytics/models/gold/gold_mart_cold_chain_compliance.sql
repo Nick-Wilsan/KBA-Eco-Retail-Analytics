@@ -25,3 +25,4 @@ SELECT
         ELSE 'Compliant'
     END AS daily_compliance_status
 FROM daily_telemetry
+ORDER BY date_id, device_id
