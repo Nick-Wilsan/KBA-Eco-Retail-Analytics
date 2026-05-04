@@ -39,3 +39,6 @@ models:
     gold:
       +schema: gold
       +materialized: table
+      +enabled: true
+      gold_anomaly_check:
+        +materialized: table
