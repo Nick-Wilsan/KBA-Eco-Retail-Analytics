@@ -2,19 +2,15 @@
 .env
 
 # Mengabaikan folder database dan isinya
-data/*.db
+data/
+*.duckdb
+*.db
 
-
-# Mengabaikan dataset mentah berukuran besar
-data/*.csv
+metabase-data/
 
 # Mengabaikan folder virtual environment Python (jika ada)
 venv/
 __pycache__/
-
-# Abaikan file hasil database
-# *.duckdb
-# *.db
 
 # Abaikan plugin bawaan Metabase
 metabase-plugins/
