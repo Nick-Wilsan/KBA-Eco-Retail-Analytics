@@ -15,9 +15,10 @@ monthly_waste AS (
 ),
 monthly_cold_chain AS (
     SELECT 
-        DATE_TRUNC('month', CAST(date_id AS DATE)) AS kpi_month,
-        SUM(temperature_violations) AS total_temp_violations
-    FROM {{ ref('gold_mart_cold_chain_compliance') }}
+        -- PERBAIKAN: Gunakan telemetry_timestamp karena date_id tidak ada di model anomali
+        DATE_TRUNC('month', CAST(telemetry_timestamp AS DATE)) AS kpi_month,
+        SUM(equipment_breach) AS total_temp_violations
+    FROM {{ ref('gold_anomaly_check') }}
     GROUP BY 1
 )
 
