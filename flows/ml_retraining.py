@@ -105,11 +105,11 @@ if __name__ == "__main__":
     # Cara Prefect mengatur jadwal (Schedule) otomatis tiap minggu (contoh: Tiap Senin jam 02:00 pagi)
     # Jika hanya ingin menjalankan sekali (manual), cukup panggil flow_ml_retraining()
     
-    flow_ml_retraining() # <-- Gunakan ini untuk testing manual
+    # flow_ml_retraining() # <-- Gunakan ini untuk testing manual
     
-    # flow_ml_retraining.serve(
-    #     name="weekly-demand-forecast",
-    #     cron="0 2 * * 1", # Jadwal CRON: Menit 0, Jam 2, Tiap Bulan, Tiap Hari, Hari Senin(1)
-    #     tags=["machine-learning", "gold-layer"]
-    # ) # <-- Matikan ini untuk testing manual, aktifkan untuk jadwal otomatis
+    flow_ml_retraining.serve(
+        name="weekly-demand-forecast",
+        cron="0 2 * * 1", # Jadwal CRON: Menit 0, Jam 2, Tiap Bulan, Tiap Hari, Hari Senin(1)
+        tags=["machine-learning", "gold-layer"]
+    ) # <-- Matikan ini untuk testing manual, aktifkan untuk jadwal otomatis
     
