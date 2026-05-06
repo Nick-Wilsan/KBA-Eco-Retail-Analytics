@@ -1,26 +1,37 @@
 import duckdb
 import pandas as pd
 
-# Setting Pandas agar menampilkan semua kolom saat di-print ke terminal
+# Setting pandas agar tabel di terminal tidak terpotong (tampil memanjang)
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 1000)
 
-# Ingat gunakan read_only=True agar tidak error terkunci
+# Sambungkan ke database DuckDB Anda
+# Gunakan read_only=True agar tidak bentrok dengan proses lain
 conn = duckdb.connect("data/warehouse.duckdb", read_only=True)
 
-print("="*60)
-print("VOLUME DATA DI BRONZE")
-print("="*60)
-query_bronze = "SELECT COUNT(*) AS total_rows FROM bronze.instacart_grocery;"
-print(f"Query: {query_bronze}\n")
-print(conn.execute(query_bronze).fetchdf())
+print("="*80)
+print("1. TABEL DEMAND FORECAST (Layer Gold)")
+print("="*80)
+# Menampilkan 5 baris pertama untuk melihat forecast_qty, lower_bound, upper_bound
+# Catatan: Jika error, ganti 'gold.' menjadi 'warehouse_gold.'
+df_forecast = conn.execute("SELECT * FROM gold.gold_mart_demand_forecast LIMIT 5;").fetchdf()
+print(df_forecast)
 print("\n")
 
-print("="*60)
-print("CONTOH TABEL GOLD (WASTE RATE PCT & STATUS)")
-print("="*60)
-query_gold = "SELECT * FROM warehouse_gold.gold_mart_food_waste_summary LIMIT 5;"
-print(f"Query: {query_gold}\n")
-print(conn.execute(query_gold).fetchdf())
+print("="*80)
+print("2. TABEL COLD CHAIN COMPLIANCE (Layer Gold)")
+print("="*80)
+# Menampilkan 5 baris pertama untuk melihat hasil compliance rate
+df_compliance = conn.execute("SELECT * FROM gold.gold_mart_cold_chain_compliance LIMIT 5;").fetchdf()
+print(df_compliance)
+print("\n")
+
+print("="*80)
+print("3. VOLUME DATA BRONZE LAYER")
+print("="*80)
+# Membuktikan bahwa data Instacart Grocery ditarik utuh (biasanya > 3 juta baris)
+df_volume = conn.execute("SELECT COUNT(*) AS total_rows FROM bronze.instacart_grocery;").fetchdf()
+print(df_volume)
+print("\n")
 
 conn.close()
