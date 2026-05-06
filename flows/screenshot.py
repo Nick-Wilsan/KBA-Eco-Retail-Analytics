@@ -21,8 +21,21 @@ print("\n")
 print("="*80)
 print("2. TABEL COLD CHAIN COMPLIANCE (Layer Gold)")
 print("="*80)
-# Menampilkan 5 baris pertama untuk melihat hasil compliance rate
-df_compliance = conn.execute("SELECT * FROM gold.gold_mart_cold_chain_compliance LIMIT 5;").fetchdf()
+
+# Menarik data dari tabel Mart yang sudah merangkum hasil AI
+query = """
+SELECT 
+    date_id, 
+    device_id, 
+    equipment_breach_count, 
+    compliance_rate_pct, 
+    anomaly_type_dominant
+FROM gold.gold_mart_cold_chain_compliance
+WHERE equipment_breach_count > 0 -- Sengaja menampilkan yang ada anomalinya
+LIMIT 5;
+"""
+
+df_compliance = conn.execute(query).fetchdf()
 print(df_compliance)
 print("\n")
 
