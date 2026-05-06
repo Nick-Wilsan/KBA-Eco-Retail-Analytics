@@ -1,27 +1,30 @@
-WITH daily_telemetry AS (
+WITH ml_anomalies AS (
     SELECT 
-        date_id,
+        CAST(telemetry_timestamp AS DATE) AS date_id,
         device_id,
-        AVG(temperature_c) AS avg_temp,
-        MAX(temperature_c) AS max_temp,
-        MIN(temperature_c) AS min_temp,
-        AVG(humidity_percentage) AS avg_humidity,
-        -- Menghitung berapa kali suhu melebihi batas aman (misal: > 5 derajat Celcius untuk Cold Chain)
-        SUM(CASE WHEN temperature_c > 5.0 THEN 1 ELSE 0 END) AS temperature_violations
-    FROM "warehouse"."silver"."silver_fact_cold_chain"
+        COUNT(*) AS total_readings,
+        -- Menjumlahkan angka 1 (breach) dari AI Kresna menjadi total count
+        SUM(equipment_breach) AS equipment_breach_count,
+        -- Mengambil rata-rata persentase kepatuhan dari AI
+        AVG(compliance_rate_pct) AS compliance_rate_pct,
+        AVG(temperature_c) AS avg_temp_saat_anomali
+    FROM "warehouse"."gold"."gold_anomaly_check"
     GROUP BY 1, 2
 )
 
 SELECT 
     date_id,
     device_id,
-    ROUND(avg_temp, 2) AS avg_temp_c,
-    ROUND(max_temp, 2) AS max_temp_c,
-    ROUND(min_temp, 2) AS min_temp_c,
-    ROUND(avg_humidity, 2) AS avg_humidity_pct,
-    temperature_violations,
+    total_readings,
+    equipment_breach_count,
+    ROUND(compliance_rate_pct, 2) AS compliance_rate_pct,
+    
+    -- Logika untuk menentukan tipe anomali dominan
     CASE 
-        WHEN temperature_violations > 0 THEN 'Non-Compliant'
-        ELSE 'Compliant'
-    END AS daily_compliance_status
-FROM daily_telemetry
+        WHEN equipment_breach_count = 0 THEN 'Normal (No Anomaly)'
+        WHEN avg_temp_saat_anomali > 5.0 THEN 'Temperature Breach'
+        ELSE 'Humidity / Unknown Anomaly'
+    END AS anomaly_type_dominant
+
+FROM ml_anomalies
+ORDER BY date_id DESC, equipment_breach_count DESC
