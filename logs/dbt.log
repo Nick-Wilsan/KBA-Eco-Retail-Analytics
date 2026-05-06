@@ -16007,3 +16007,983 @@ C:\Windows\System32\dllhost.exe (PID 1288)
 [0m10:30:26.341621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229B5F46650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229BCBC0110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229BEA8A0D0>]}
 [0m10:30:26.349241 [debug] [MainThread]: Flushing usage events
 [0m10:30:28.050498 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:46:18.919699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028107AD7A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028109B97C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028109B97890>]}
+
+
+============================== 18:46:18.943933 | da2b7366-f858-4add-bab6-8f50f3366c9f ==============================
+[0m18:46:18.943933 [info ] [MainThread]: Running with dbt=1.11.8
+[0m18:46:18.944898 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ACER\\Documents\\KBA\\KBA-Eco-Retail-Analytics', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --select gold_prophet_demand_forecast', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ACER\\Documents\\KBA\\KBA-Eco-Retail-Analytics\\logs'}
+[0m18:46:19.599803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'da2b7366-f858-4add-bab6-8f50f3366c9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028107DBB100>]}
+[0m18:46:19.787680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'da2b7366-f858-4add-bab6-8f50f3366c9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028109A76AD0>]}
+[0m18:46:19.796422 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m18:46:20.248941 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m18:46:22.413510 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 122 files changed.
+[0m18:46:22.414448 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\_get_like_pattern_expression.sql
+[0m18:46:22.414910 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\distributional\expect_row_values_to_have_data_for_every_n_datepart.sql
+[0m18:46:22.415607 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\_generalized\equal_expression.sql
+[0m18:46:22.416243 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\month_name.sql
+[0m18:46:22.416687 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\to_unixtimestamp.sql
+[0m18:46:22.417114 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_column_count_to_be_between.sql
+[0m18:46:22.417592 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\next_month_number.sql
+[0m18:46:22.418042 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\math\rand.sql
+[0m18:46:22.418466 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\fiscal_date\get_fiscal_periods.sql
+[0m18:46:22.418883 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\last_week.sql
+[0m18:46:22.419299 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\last_month_number.sql
+[0m18:46:22.419952 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\regex\regexp_instr.sql
+[0m18:46:22.420429 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\multi-column\expect_compound_columns_to_be_unique.sql
+[0m18:46:22.420855 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_increasing.sql
+[0m18:46:22.421228 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_match_regex.sql
+[0m18:46:22.421780 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\iso_week_start.sql
+[0m18:46:22.422217 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_max_to_be_between.sql
+[0m18:46:22.422642 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\_utils\modules_datetime.sql
+[0m18:46:22.423066 [debug] [MainThread]: Partial parsing: updated file: eco_retail_analytics://models\gold\gold_prophet_demand_forecast.py
+[0m18:46:22.424269 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\today.sql
+[0m18:46:22.424650 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\next_month_name.sql
+[0m18:46:22.425192 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_in_set.sql
+[0m18:46:22.425629 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_columns_to_contain_set.sql
+[0m18:46:22.426269 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\utils\datatypes.sql
+[0m18:46:22.426653 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\next_week.sql
+[0m18:46:22.427079 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_column_count_to_equal.sql
+[0m18:46:22.427506 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_distinct_count_to_be_greater_than.sql
+[0m18:46:22.427938 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\day_of_month.sql
+[0m18:46:22.428375 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_distinct_count_to_equal.sql
+[0m18:46:22.428868 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\utils\groupby.sql
+[0m18:46:22.429241 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_grouped_row_values_to_have_recent_data.sql
+[0m18:46:22.429760 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\now.sql
+[0m18:46:22.430225 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_column_to_exist.sql
+[0m18:46:22.432709 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\_generalized\_truth_expression.sql
+[0m18:46:22.433098 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\distributional\expect_column_values_to_be_within_n_moving_stdevs.sql
+[0m18:46:22.433515 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\week_start.sql
+[0m18:46:22.433889 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\n_weeks_away.sql
+[0m18:46:22.434319 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\round_timestamp.sql
+[0m18:46:22.434759 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\day_name.sql
+[0m18:46:22.435127 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\periods_since.sql
+[0m18:46:22.435495 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_row_count_to_equal_other_table_times_factor.sql
+[0m18:46:22.435860 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\multi-column\expect_column_pair_values_A_to_be_greater_than_B.sql
+[0m18:46:22.436294 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_distinct_values_to_contain_set.sql
+[0m18:46:22.436662 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\n_months_ago.sql
+[0m18:46:22.437031 [debug] [MainThread]: Partial parsing: updated file: eco_retail_analytics://models\gold\gold_anomaly_check.py
+[0m18:46:22.437407 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_aggregation_to_equal_other_table.sql
+[0m18:46:22.437780 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_mean_to_be_between.sql
+[0m18:46:22.438217 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\multi-column\expect_select_column_values_to_be_unique_within_record.sql
+[0m18:46:22.438592 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\_generalized\expression_between.sql
+[0m18:46:22.439000 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_distinct_count_to_equal_other_table.sql
+[0m18:46:22.439496 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\day_of_week.sql
+[0m18:46:22.439869 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\get_date_dimension.sql
+[0m18:46:22.440299 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_columns_to_match_set.sql
+[0m18:46:22.440671 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_null.sql
+[0m18:46:22.441038 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_not_be_null.sql
+[0m18:46:22.441402 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\_generalized\expression_is_true.sql
+[0m18:46:22.441766 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_row_values_to_have_recent_data.sql
+[0m18:46:22.442139 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_row_count_to_equal_other_table.sql
+[0m18:46:22.442562 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\utils\md5.sql
+[0m18:46:22.442930 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_row_count_to_be_between.sql
+[0m18:46:22.443296 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_row_count_to_equal.sql
+[0m18:46:22.443668 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\iso_week_end.sql
+[0m18:46:22.444194 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\week_end.sql
+[0m18:46:22.444569 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_match_like_pattern.sql
+[0m18:46:22.445003 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\_generalized\_ignore_row_if_expression.sql
+[0m18:46:22.445554 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\date_part.sql
+[0m18:46:22.445925 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\day_of_year.sql
+[0m18:46:22.446308 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\n_weeks_ago.sql
+[0m18:46:22.446671 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\tomorrow.sql
+[0m18:46:22.447142 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_in_type_list.sql
+[0m18:46:22.447571 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_not_be_in_set.sql
+[0m18:46:22.447941 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_stdev_to_be_between.sql
+[0m18:46:22.448324 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\multi-column\expect_column_pair_values_to_be_in_set.sql
+[0m18:46:22.448686 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\n_days_away.sql
+[0m18:46:22.449048 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\last_month.sql
+[0m18:46:22.449567 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\_get_column_list.sql
+[0m18:46:22.449939 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\yesterday.sql
+[0m18:46:22.450370 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_distinct_values_to_be_in_set.sql
+[0m18:46:22.450821 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\distributional\expect_column_values_to_be_within_n_stdevs.sql
+[0m18:46:22.451199 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_match_regex_list.sql
+[0m18:46:22.451567 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_not_match_like_pattern_list.sql
+[0m18:46:22.451934 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\n_days_ago.sql
+[0m18:46:22.452310 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_of_type.sql
+[0m18:46:22.452850 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\_utils\generate_series.sql
+[0m18:46:22.453225 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_min_to_be_between.sql
+[0m18:46:22.453591 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_median_to_be_between.sql
+[0m18:46:22.453955 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\_utils\date_spine.sql
+[0m18:46:22.454398 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\from_unixtimestamp.sql
+[0m18:46:22.454826 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_most_common_value_to_be_in_set.sql
+[0m18:46:22.455350 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\convert_timezone.sql
+[0m18:46:22.455773 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\iso_week_of_year.sql
+[0m18:46:22.456157 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_match_like_pattern_list.sql
+[0m18:46:22.456527 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_not_match_like_pattern.sql
+[0m18:46:22.456890 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\week_of_year.sql
+[0m18:46:22.457305 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\math\median.sql
+[0m18:46:22.457791 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_have_consistent_casing.sql
+[0m18:46:22.458188 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_columns_to_not_contain_set.sql
+[0m18:46:22.458617 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_distinct_values_to_equal_set.sql
+[0m18:46:22.458995 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_sum_to_be_between.sql
+[0m18:46:22.459375 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\get_base_dates.sql
+[0m18:46:22.459745 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_unique_value_count_to_be_between.sql
+[0m18:46:22.460171 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_decreasing.sql
+[0m18:46:22.460632 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\fiscal_date\get_fiscal_year_dates.sql
+[0m18:46:22.461008 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_value_lengths_to_equal.sql
+[0m18:46:22.461392 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_proportion_of_unique_values_to_be_between.sql
+[0m18:46:22.461766 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_between.sql
+[0m18:46:22.462205 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\math\percentile_cont.sql
+[0m18:46:22.462576 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_not_match_regex.sql
+[0m18:46:22.462949 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\multi-column\expect_column_pair_values_to_be_equal.sql
+[0m18:46:22.463317 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\next_month.sql
+[0m18:46:22.463696 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_value_lengths_to_be_between.sql
+[0m18:46:22.464122 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_column_count_to_equal_other_table.sql
+[0m18:46:22.464587 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\math\log_natural.sql
+[0m18:46:22.464989 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_columns_to_match_ordered_list.sql
+[0m18:46:22.465375 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_unique.sql
+[0m18:46:22.465751 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_distinct_count_to_be_less_than.sql
+[0m18:46:22.466170 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_not_match_regex_list.sql
+[0m18:46:22.466607 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\_list_intersect.sql
+[0m18:46:22.466977 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\last_month_name.sql
+[0m18:46:22.467343 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\n_months_away.sql
+[0m18:46:22.467721 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\multi-column\expect_multicolumn_sum_to_equal.sql
+[0m18:46:22.468092 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_quantile_values_to_be_between.sql
+[0m18:46:23.542330 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test
+`dbt_expectations.expect_column_values_to_be_between` defined on
+'gold_mart_food_waste_summary' in package 'eco_retail_analytics'
+(models\gold\_gold_models.yml). Arguments to generic tests should be nested
+under the `arguments` property.
+[0m18:46:23.542994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'da2b7366-f858-4add-bab6-8f50f3366c9f', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028109CE1B50>]}
+[0m18:46:24.028819 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found two resources with the database representation ""warehouse"."gold"."gold_mart_demand_forecast"".
+  dbt cannot create two resources with identical database representations. To fix this,
+  change the configuration of one of these resources:
+  - model.eco_retail_analytics.gold_prophet_demand_forecast (models\gold\gold_prophet_demand_forecast.py)
+  - model.eco_retail_analytics.gold_mart_demand_forecast (models\gold\gold_mart_demand_forecast.sql)
+[0m18:46:24.029729 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 9 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m18:46:24.030910 [debug] [MainThread]: Command `dbt run` failed at 18:46:24.030775 after 5.25 seconds
+[0m18:46:24.031326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002810B1263F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002810B127110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028109B83E70>]}
+[0m18:46:24.031731 [debug] [MainThread]: Flushing usage events
+[0m18:46:25.725361 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:46:35.261187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E208AD7A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E20AB97C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E20AB97890>]}
+
+
+============================== 18:46:35.265587 | 7c7bf8d8-d29b-44b3-a1c1-58777a509c69 ==============================
+[0m18:46:35.265587 [info ] [MainThread]: Running with dbt=1.11.8
+[0m18:46:35.266344 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ACER\\Documents\\KBA\\KBA-Eco-Retail-Analytics', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run --select gold_anomaly_check', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ACER\\Documents\\KBA\\KBA-Eco-Retail-Analytics\\logs'}
+[0m18:46:35.611444 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7c7bf8d8-d29b-44b3-a1c1-58777a509c69', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E208DBB100>]}
+[0m18:46:35.718281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7c7bf8d8-d29b-44b3-a1c1-58777a509c69', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E20AA7AAD0>]}
+[0m18:46:35.720743 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m18:46:36.127738 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m18:46:36.411772 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:46:36.412192 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:46:36.412508 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:46:36.419725 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found two resources with the database representation ""warehouse"."gold"."gold_mart_demand_forecast"".
+  dbt cannot create two resources with identical database representations. To fix this,
+  change the configuration of one of these resources:
+  - model.eco_retail_analytics.gold_prophet_demand_forecast (models\gold\gold_prophet_demand_forecast.py)
+  - model.eco_retail_analytics.gold_mart_demand_forecast (models\gold\gold_mart_demand_forecast.sql)
+[0m18:46:36.420937 [debug] [MainThread]: Command `dbt run` failed at 18:46:36.420794 after 1.29 seconds
+[0m18:46:36.421357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E20C15FE50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E20C15FB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E20C237110>]}
+[0m18:46:36.421755 [debug] [MainThread]: Flushing usage events
+[0m18:46:37.886702 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:49:15.663473 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC697DBA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC6B897C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC6B897B10>]}
+
+
+============================== 18:49:15.669769 | 7bc53279-0daf-4fa1-a205-4c77e1e06762 ==============================
+[0m18:49:15.669769 [info ] [MainThread]: Running with dbt=1.11.8
+[0m18:49:15.670555 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ACER\\Documents\\KBA\\KBA-Eco-Retail-Analytics', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt run --select gold_prophet_demand_forecast', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ACER\\Documents\\KBA\\KBA-Eco-Retail-Analytics\\logs'}
+[0m18:49:16.059261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7bc53279-0daf-4fa1-a205-4c77e1e06762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC69ABB100>]}
+[0m18:49:16.173439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7bc53279-0daf-4fa1-a205-4c77e1e06762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC6B77EAD0>]}
+[0m18:49:16.176121 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m18:49:16.553070 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m18:49:16.771653 [debug] [MainThread]: Partial parsing enabled: 2 files deleted, 0 files added, 0 files changed.
+[0m18:49:16.772267 [debug] [MainThread]: Partial parsing: deleted file: eco_retail_analytics://models\gold\gold_mart_cold_chain_compliance.sql
+[0m18:49:16.772644 [debug] [MainThread]: Partial parsing: deleted file: eco_retail_analytics://models\gold\gold_mart_demand_forecast.sql
+[0m18:49:16.971105 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7bc53279-0daf-4fa1-a205-4c77e1e06762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC6BE62550>]}
+[0m18:49:17.114515 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\target\manifest.json
+[0m18:49:17.117623 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\target\semantic_manifest.json
+[0m18:49:17.224667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7bc53279-0daf-4fa1-a205-4c77e1e06762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC6BCFB020>]}
+[0m18:49:17.225248 [info ] [MainThread]: Found 20 models, 19 data tests, 5 sources, 743 macros
+[0m18:49:17.225687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7bc53279-0daf-4fa1-a205-4c77e1e06762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC6D2152B0>]}
+[0m18:49:17.228056 [info ] [MainThread]: 
+[0m18:49:17.228769 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:49:17.229196 [info ] [MainThread]: 
+[0m18:49:17.229793 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:49:17.231099 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse'
+[0m18:49:20.380896 [debug] [ThreadPool]: Using duckdb connection "list_warehouse"
+[0m18:49:20.381511 [debug] [ThreadPool]: On list_warehouse: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"warehouse"'
+    
+  
+  
+[0m18:49:20.381966 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:49:20.504869 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\data\warehouse.duckdb": The process cannot access the file because it is being used by another process.
+
+File is already open in 
+C:\Windows\System32\dllhost.exe (PID 17540)
+[0m18:49:20.505691 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"warehouse"'
+    
+  
+  
+[0m18:49:20.506398 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m18:49:20.506987 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:49:20.626421 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\data\warehouse.duckdb": The process cannot access the file because it is being used by another process.
+
+File is already open in 
+C:\Windows\System32\dllhost.exe (PID 17540)
+[0m18:49:20.627126 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: macro list_schemas
+[0m18:49:20.627725 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m18:49:20.628273 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:49:20.747389 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:49:20.748087 [debug] [MainThread]: Connection 'list_warehouse' was properly closed.
+[0m18:49:20.748686 [info ] [MainThread]: 
+[0m18:49:20.749365 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 3.52 seconds (3.52s).
+[0m18:49:20.750240 [error] [MainThread]: Encountered an error:
+IO Error: Cannot open file "C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\data\warehouse.duckdb": The process cannot access the file because it is being used by another process.
+
+File is already open in 
+C:\Windows\System32\dllhost.exe (PID 17540)
+[0m18:49:20.822327 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\duckdb\connections.py", line 95, in exception_handler
+    yield
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\sql\connections.py", line 147, in add_query
+    cursor = connection.handle.cursor()
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\duckdb\connections.py", line 53, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\duckdb\environments\local.py", line 75, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 159, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\data\warehouse.duckdb": The process cannot access the file because it is being used by another process.
+
+File is already open in 
+C:\Windows\System32\dllhost.exe (PID 17540)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\duckdb\connections.py", line 95, in exception_handler
+    yield
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\base\impl.py", line 1320, in execute_macro
+    result = macro_function(**kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt_common\clients\jinja.py", line 427, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 20, in macro
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\clients\jinja.py", line 82, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 50, in macro
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\clients\jinja.py", line 82, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 33, in macro
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\clients\jinja.py", line 82, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt_common\record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\base\impl.py", line 471, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\duckdb\connections.py", line 130, in execute
+    return super().execute(sql, auto_begin, fetch, limit)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\sql\connections.py", line 219, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\sql\connections.py", line 131, in add_query
+    with self.exception_handler(sql):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\duckdb\connections.py", line 102, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\base\connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\duckdb\connections.py", line 53, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\duckdb\environments\local.py", line 75, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 159, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\data\warehouse.duckdb": The process cannot access the file because it is being used by another process.
+
+File is already open in 
+C:\Windows\System32\dllhost.exe (PID 17540)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\cli\requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\cli\requires.py", line 391, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\cli\requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\cli\requires.py", line 408, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\cli\main.py", line 593, in run
+    results = task.run()
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\task\runnable.py", line 626, in run
+    result = self.execute_with_hooks(selected_uids)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\task\runnable.py", line 559, in execute_with_hooks
+    before_run_status = self.before_run(adapter, selected_uids)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\task\run.py", line 1114, in before_run
+    self.create_schemas(adapter, required_schemas)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\task\runnable.py", line 734, in create_schemas
+    existing_schemas_lowered.update(ls_future.result())
+                                    ~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt_common\utils\executor.py", line 16, in connected
+    return func(*args, **kwargs)
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\task\runnable.py", line 709, in list_schemas
+    for s in adapter.list_schemas(database_quoted)
+             ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\sql\impl.py", line 218, in list_schemas
+    results = self.execute_macro(LIST_SCHEMAS_MACRO_NAME, kwargs={"database": database})
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\base\impl.py", line 1319, in execute_macro
+    with self.connections.exception_handler(f"macro {macro_name}"):
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3568.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\duckdb\connections.py", line 102, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\base\connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\duckdb\connections.py", line 53, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\duckdb\environments\local.py", line 75, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 159, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\data\warehouse.duckdb": The process cannot access the file because it is being used by another process.
+
+File is already open in 
+C:\Windows\System32\dllhost.exe (PID 17540)
+
+[0m18:49:20.825730 [debug] [MainThread]: Command `dbt run` failed at 18:49:20.825455 after 5.34 seconds
+[0m18:49:20.826607 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC6D36A410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC6B950950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC6D067650>]}
+[0m18:49:20.827439 [debug] [MainThread]: Flushing usage events
+[0m18:49:22.538337 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:50:09.260683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF0B8DBA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF0D997C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF0D997B10>]}
+
+
+============================== 18:50:09.265307 | 8c610c53-1702-44cd-acce-6ed3dc19e799 ==============================
+[0m18:50:09.265307 [info ] [MainThread]: Running with dbt=1.11.8
+[0m18:50:09.265926 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\ACER\\Documents\\KBA\\KBA-Eco-Retail-Analytics', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --select gold_prophet_demand_forecast', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ACER\\Documents\\KBA\\KBA-Eco-Retail-Analytics\\logs'}
+[0m18:50:09.626050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8c610c53-1702-44cd-acce-6ed3dc19e799', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF0BBBB100>]}
+[0m18:50:09.736531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8c610c53-1702-44cd-acce-6ed3dc19e799', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF0D876AD0>]}
+[0m18:50:09.739027 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m18:50:10.281457 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m18:50:10.511427 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:50:10.511906 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:50:10.512239 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:50:10.632324 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8c610c53-1702-44cd-acce-6ed3dc19e799', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF0DAE3550>]}
+[0m18:50:10.767998 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\target\manifest.json
+[0m18:50:10.771103 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\target\semantic_manifest.json
+[0m18:50:10.785450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8c610c53-1702-44cd-acce-6ed3dc19e799', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF0DDFB020>]}
+[0m18:50:10.786011 [info ] [MainThread]: Found 20 models, 19 data tests, 5 sources, 743 macros
+[0m18:50:10.786454 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8c610c53-1702-44cd-acce-6ed3dc19e799', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF0F3112B0>]}
+[0m18:50:10.788850 [info ] [MainThread]: 
+[0m18:50:10.789470 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:50:10.790118 [info ] [MainThread]: 
+[0m18:50:10.791083 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:50:10.792394 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse'
+[0m18:50:10.887207 [debug] [ThreadPool]: Using duckdb connection "list_warehouse"
+[0m18:50:10.887673 [debug] [ThreadPool]: On list_warehouse: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"warehouse"'
+    
+  
+  
+[0m18:50:10.888038 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:50:10.937990 [debug] [ThreadPool]: SQL status: OK in 0.050 seconds
+[0m18:50:10.940099 [debug] [ThreadPool]: On list_warehouse: Close
+[0m18:50:10.940968 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_warehouse, now create_warehouse_gold)
+[0m18:50:10.941586 [debug] [ThreadPool]: Creating schema "database: "warehouse"
+schema: "gold"
+"
+[0m18:50:10.948739 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_gold"
+[0m18:50:10.949287 [debug] [ThreadPool]: On create_warehouse_gold: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "create_warehouse_gold"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='warehouse'
+        and type='sqlite'
+    
+  
+[0m18:50:10.949688 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:50:10.951310 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m18:50:10.952985 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_gold"
+[0m18:50:10.953466 [debug] [ThreadPool]: On create_warehouse_gold: BEGIN
+[0m18:50:10.954400 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:50:10.954817 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_gold"
+[0m18:50:10.955183 [debug] [ThreadPool]: On create_warehouse_gold: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "create_warehouse_gold"} */
+
+    
+    
+        create schema if not exists "warehouse"."gold"
+    
+[0m18:50:10.956923 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:50:10.958081 [debug] [ThreadPool]: On create_warehouse_gold: COMMIT
+[0m18:50:10.958508 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_gold"
+[0m18:50:10.958864 [debug] [ThreadPool]: On create_warehouse_gold: COMMIT
+[0m18:50:10.959581 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:50:10.960000 [debug] [ThreadPool]: On create_warehouse_gold: Close
+[0m18:50:10.968206 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_silver'
+[0m18:50:10.975843 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_silver"
+[0m18:50:10.976591 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_gold'
+[0m18:50:10.977101 [debug] [ThreadPool]: On list_warehouse_silver: BEGIN
+[0m18:50:10.979497 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_gold"
+[0m18:50:10.980020 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:50:10.980585 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_warehouse'
+[0m18:50:10.981058 [debug] [ThreadPool]: On list_warehouse_gold: BEGIN
+[0m18:50:10.982517 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_bronze'
+[0m18:50:10.985611 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse"
+[0m18:50:10.986294 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:50:10.986804 [debug] [ThreadPool]: SQL status: OK in 0.007 seconds
+[0m18:50:10.989408 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_bronze"
+[0m18:50:10.989955 [debug] [ThreadPool]: On list_warehouse_warehouse: BEGIN
+[0m18:50:10.990920 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_silver"
+[0m18:50:10.991523 [debug] [ThreadPool]: On list_warehouse_bronze: BEGIN
+[0m18:50:10.992232 [debug] [ThreadPool]: SQL status: OK in 0.006 seconds
+[0m18:50:10.992840 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:50:10.993457 [debug] [ThreadPool]: On list_warehouse_silver: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_silver"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'silver'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m18:50:10.994041 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:50:10.994579 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_gold"
+[0m18:50:10.995844 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m18:50:10.996928 [debug] [ThreadPool]: On list_warehouse_gold: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_gold"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'gold'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m18:50:10.998142 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m18:50:10.998747 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse"
+[0m18:50:10.999772 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_bronze"
+[0m18:50:11.000521 [debug] [ThreadPool]: On list_warehouse_warehouse: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_warehouse"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'warehouse'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m18:50:11.001295 [debug] [ThreadPool]: On list_warehouse_bronze: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_bronze"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'bronze'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m18:50:11.009751 [debug] [ThreadPool]: SQL status: OK in 0.014 seconds
+[0m18:50:11.010570 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m18:50:11.011478 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m18:50:11.012198 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m18:50:11.014585 [debug] [ThreadPool]: On list_warehouse_silver: ROLLBACK
+[0m18:50:11.017820 [debug] [ThreadPool]: On list_warehouse_gold: ROLLBACK
+[0m18:50:11.020567 [debug] [ThreadPool]: On list_warehouse_warehouse: ROLLBACK
+[0m18:50:11.022677 [debug] [ThreadPool]: On list_warehouse_bronze: ROLLBACK
+[0m18:50:11.024971 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_silver'
+[0m18:50:11.025898 [debug] [ThreadPool]: On list_warehouse_silver: Close
+[0m18:50:11.028245 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_warehouse'
+[0m18:50:11.029414 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_gold'
+[0m18:50:11.030093 [debug] [ThreadPool]: On list_warehouse_warehouse: Close
+[0m18:50:11.034400 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_bronze'
+[0m18:50:11.035179 [debug] [ThreadPool]: On list_warehouse_gold: Close
+[0m18:50:11.036171 [debug] [ThreadPool]: On list_warehouse_bronze: Close
+[0m18:50:11.041845 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8c610c53-1702-44cd-acce-6ed3dc19e799', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF0F465B20>]}
+[0m18:50:11.042429 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:50:11.042951 [debug] [MainThread]: On master: BEGIN
+[0m18:50:11.043352 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:50:11.044137 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:50:11.044643 [debug] [MainThread]: On master: COMMIT
+[0m18:50:11.045100 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:50:11.045575 [debug] [MainThread]: On master: COMMIT
+[0m18:50:11.046703 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:50:11.047368 [debug] [MainThread]: On master: Close
+[0m18:50:11.095265 [debug] [Thread-1 (]: Began running node model.eco_retail_analytics.gold_prophet_demand_forecast
+[0m18:50:11.095967 [info ] [Thread-1 (]: 1 of 1 START python table model gold.gold_mart_demand_forecast ................. [RUN]
+[0m18:50:11.096674 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.eco_retail_analytics.gold_prophet_demand_forecast'
+[0m18:50:11.097348 [debug] [Thread-1 (]: Began compiling node model.eco_retail_analytics.gold_prophet_demand_forecast
+[0m18:50:11.130129 [debug] [Thread-1 (]: Writing injected SQL for node "model.eco_retail_analytics.gold_prophet_demand_forecast"
+[0m18:50:11.131258 [debug] [Thread-1 (]: Began executing node model.eco_retail_analytics.gold_prophet_demand_forecast
+[0m18:50:11.166214 [debug] [Thread-1 (]: Writing runtime python for node "model.eco_retail_analytics.gold_prophet_demand_forecast"
+[0m18:50:11.167338 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:51:57.597779 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_prophet_demand_forecast"
+[0m18:51:57.598497 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_prophet_demand_forecast: BEGIN
+[0m18:51:57.599417 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:51:57.600007 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_prophet_demand_forecast"
+[0m18:51:57.600991 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_prophet_demand_forecast: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_prophet_demand_forecast"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'gold'
+      AND table_name = 'gold_mart_demand_forecast'
+  
+[0m18:51:57.604217 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:51:57.606313 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_prophet_demand_forecast"
+[0m18:51:57.606924 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_prophet_demand_forecast: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_prophet_demand_forecast"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'gold'
+      AND table_name = 'gold_mart_demand_forecast'
+  
+[0m18:51:57.611818 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:51:57.624299 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_prophet_demand_forecast"
+[0m18:51:57.625002 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_prophet_demand_forecast: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_prophet_demand_forecast"} */
+alter table "warehouse"."gold"."gold_mart_demand_forecast" rename to "gold_mart_demand_forecast__dbt_backup"
+[0m18:51:57.626193 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:51:57.631649 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_prophet_demand_forecast"
+[0m18:51:57.632316 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_prophet_demand_forecast: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_prophet_demand_forecast"} */
+alter table "warehouse"."gold"."gold_mart_demand_forecast__dbt_tmp" rename to "gold_mart_demand_forecast"
+[0m18:51:57.633441 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:51:57.660149 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_prophet_demand_forecast: COMMIT
+[0m18:51:57.660825 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_prophet_demand_forecast"
+[0m18:51:57.661417 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_prophet_demand_forecast: COMMIT
+[0m18:51:57.663165 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:51:57.671807 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_prophet_demand_forecast"
+[0m18:51:57.672520 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_prophet_demand_forecast: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_prophet_demand_forecast"} */
+
+      drop table if exists "warehouse"."gold"."gold_mart_demand_forecast__dbt_backup" cascade
+    
+[0m18:51:57.675618 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:51:57.679842 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_prophet_demand_forecast: Close
+[0m18:51:57.692647 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8c610c53-1702-44cd-acce-6ed3dc19e799', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF0F620710>]}
+[0m18:51:57.693899 [info ] [Thread-1 (]: 1 of 1 OK created python table model gold.gold_mart_demand_forecast ............ [[32mOK[0m in 106.58s]
+[0m18:51:57.695016 [debug] [Thread-1 (]: Finished running node model.eco_retail_analytics.gold_prophet_demand_forecast
+[0m18:51:57.711308 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:51:57.712015 [debug] [MainThread]: On master: BEGIN
+[0m18:51:57.712672 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:51:57.713789 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:51:57.714348 [debug] [MainThread]: On master: COMMIT
+[0m18:51:57.714875 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:51:57.715362 [debug] [MainThread]: On master: COMMIT
+[0m18:51:57.716127 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:51:57.716639 [debug] [MainThread]: On master: Close
+[0m18:51:57.717247 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:51:57.717686 [debug] [MainThread]: Connection 'create_warehouse_gold' was properly closed.
+[0m18:51:57.718177 [debug] [MainThread]: Connection 'list_warehouse_silver' was properly closed.
+[0m18:51:57.718830 [debug] [MainThread]: Connection 'list_warehouse_gold' was properly closed.
+[0m18:51:57.719412 [debug] [MainThread]: Connection 'list_warehouse_warehouse' was properly closed.
+[0m18:51:57.719926 [debug] [MainThread]: Connection 'list_warehouse_bronze' was properly closed.
+[0m18:51:57.720381 [debug] [MainThread]: Connection 'model.eco_retail_analytics.gold_prophet_demand_forecast' was properly closed.
+[0m18:51:57.720943 [info ] [MainThread]: 
+[0m18:51:57.721537 [info ] [MainThread]: Finished running 1 table model in 0 hours 1 minutes and 46.93 seconds (106.93s).
+[0m18:51:57.722679 [debug] [MainThread]: Command end result
+[0m18:52:40.997369 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\target\manifest.json
+[0m18:52:41.001101 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\target\semantic_manifest.json
+[0m18:52:41.009805 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\target\run_results.json
+[0m18:52:41.010644 [info ] [MainThread]: 
+[0m18:52:41.011291 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:52:41.012073 [info ] [MainThread]: 
+[0m18:52:41.012650 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m18:52:41.013929 [debug] [MainThread]: Command `dbt run` succeeded at 18:52:41.013765 after 151.90 seconds
+[0m18:52:41.014431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF3FC43330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF3FEAB570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF3FEABCF0>]}
+[0m18:52:41.014961 [debug] [MainThread]: Flushing usage events
+[0m18:52:42.678752 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:55:45.290391 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000276DC9DBA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000276DEA97C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000276DEA97B10>]}
+
+
+============================== 18:55:45.294936 | d6426236-1b4e-4d40-b6b1-ea38f6c578fa ==============================
+[0m18:55:45.294936 [info ] [MainThread]: Running with dbt=1.11.8
+[0m18:55:45.295552 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ACER\\Documents\\KBA\\KBA-Eco-Retail-Analytics', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt run --select gold_anomaly_check', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ACER\\Documents\\KBA\\KBA-Eco-Retail-Analytics\\logs'}
+[0m18:55:45.728368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd6426236-1b4e-4d40-b6b1-ea38f6c578fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000276DCCBB100>]}
+[0m18:55:45.882520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd6426236-1b4e-4d40-b6b1-ea38f6c578fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000276DE976AD0>]}
+[0m18:55:45.885288 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m18:55:46.247187 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m18:55:46.463644 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m18:55:46.464377 [debug] [MainThread]: Partial parsing: updated file: eco_retail_analytics://models\gold\gold_prophet_demand_forecast.py
+[0m18:55:46.464853 [debug] [MainThread]: Partial parsing: updated file: eco_retail_analytics://models\gold\gold_anomaly_check.py
+[0m18:55:46.946052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd6426236-1b4e-4d40-b6b1-ea38f6c578fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000276E005A950>]}
+[0m18:55:47.067684 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\target\manifest.json
+[0m18:55:47.070627 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\target\semantic_manifest.json
+[0m18:55:47.084713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd6426236-1b4e-4d40-b6b1-ea38f6c578fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000276DEEFB020>]}
+[0m18:55:47.085330 [info ] [MainThread]: Found 20 models, 19 data tests, 5 sources, 743 macros
+[0m18:55:47.085762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd6426236-1b4e-4d40-b6b1-ea38f6c578fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000276E049B150>]}
+[0m18:55:47.087955 [info ] [MainThread]: 
+[0m18:55:47.088383 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:55:47.088747 [info ] [MainThread]: 
+[0m18:55:47.089308 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:55:47.090536 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse'
+[0m18:55:47.177793 [debug] [ThreadPool]: Using duckdb connection "list_warehouse"
+[0m18:55:47.178247 [debug] [ThreadPool]: On list_warehouse: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"warehouse"'
+    
+  
+  
+[0m18:55:47.178650 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:55:47.224118 [debug] [ThreadPool]: SQL status: OK in 0.045 seconds
+[0m18:55:47.225587 [debug] [ThreadPool]: On list_warehouse: Close
+[0m18:55:47.226364 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_warehouse, now create_warehouse_gold)
+[0m18:55:47.226896 [debug] [ThreadPool]: Creating schema "database: "warehouse"
+schema: "gold"
+"
+[0m18:55:47.233918 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_gold"
+[0m18:55:47.234352 [debug] [ThreadPool]: On create_warehouse_gold: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "create_warehouse_gold"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='warehouse'
+        and type='sqlite'
+    
+  
+[0m18:55:47.234706 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:55:47.235802 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:55:47.237272 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_gold"
+[0m18:55:47.237671 [debug] [ThreadPool]: On create_warehouse_gold: BEGIN
+[0m18:55:47.238338 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:55:47.238710 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_gold"
+[0m18:55:47.239059 [debug] [ThreadPool]: On create_warehouse_gold: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "create_warehouse_gold"} */
+
+    
+    
+        create schema if not exists "warehouse"."gold"
+    
+[0m18:55:47.239684 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:55:47.240620 [debug] [ThreadPool]: On create_warehouse_gold: COMMIT
+[0m18:55:47.240987 [debug] [ThreadPool]: Using duckdb connection "create_warehouse_gold"
+[0m18:55:47.241325 [debug] [ThreadPool]: On create_warehouse_gold: COMMIT
+[0m18:55:47.241832 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:55:47.242206 [debug] [ThreadPool]: On create_warehouse_gold: Close
+[0m18:55:47.249368 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_gold'
+[0m18:55:47.255986 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_gold"
+[0m18:55:47.256417 [debug] [ThreadPool]: On list_warehouse_gold: BEGIN
+[0m18:55:47.256771 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:55:47.257476 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_warehouse'
+[0m18:55:47.258011 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:55:47.260243 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse"
+[0m18:55:47.260717 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_gold"
+[0m18:55:47.261232 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_silver'
+[0m18:55:47.261690 [debug] [ThreadPool]: On list_warehouse_warehouse: BEGIN
+[0m18:55:47.262277 [debug] [ThreadPool]: On list_warehouse_gold: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_gold"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'gold'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m18:55:47.264475 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_silver"
+[0m18:55:47.265003 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_warehouse_bronze'
+[0m18:55:47.265458 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:55:47.266247 [debug] [ThreadPool]: On list_warehouse_silver: BEGIN
+[0m18:55:47.268274 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_bronze"
+[0m18:55:47.268964 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:55:47.269420 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m18:55:47.269864 [debug] [ThreadPool]: On list_warehouse_bronze: BEGIN
+[0m18:55:47.270561 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_warehouse"
+[0m18:55:47.271034 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m18:55:47.271547 [debug] [ThreadPool]: SQL status: OK in 0.006 seconds
+[0m18:55:47.272295 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:55:47.272751 [debug] [ThreadPool]: On list_warehouse_warehouse: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_warehouse"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'warehouse'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m18:55:47.273194 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_silver"
+[0m18:55:47.274923 [debug] [ThreadPool]: On list_warehouse_gold: ROLLBACK
+[0m18:55:47.275576 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m18:55:47.276002 [debug] [ThreadPool]: On list_warehouse_silver: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_silver"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'silver'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m18:55:47.276608 [debug] [ThreadPool]: Using duckdb connection "list_warehouse_bronze"
+[0m18:55:47.277286 [debug] [ThreadPool]: On list_warehouse_bronze: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "connection_name": "list_warehouse_bronze"} */
+select
+      'warehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'bronze'
+    and lower(table_catalog) = 'warehouse'
+  
+[0m18:55:47.278614 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_gold'
+[0m18:55:47.279109 [debug] [ThreadPool]: On list_warehouse_gold: Close
+[0m18:55:47.279587 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m18:55:47.281311 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m18:55:47.282757 [debug] [ThreadPool]: On list_warehouse_silver: ROLLBACK
+[0m18:55:47.283435 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_silver'
+[0m18:55:47.283819 [debug] [ThreadPool]: On list_warehouse_silver: Close
+[0m18:55:47.285048 [debug] [ThreadPool]: On list_warehouse_warehouse: ROLLBACK
+[0m18:55:47.285616 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m18:55:47.286415 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_warehouse'
+[0m18:55:47.288363 [debug] [ThreadPool]: On list_warehouse_warehouse: Close
+[0m18:55:47.289651 [debug] [ThreadPool]: On list_warehouse_bronze: ROLLBACK
+[0m18:55:47.291415 [debug] [ThreadPool]: Failed to rollback 'list_warehouse_bronze'
+[0m18:55:47.291761 [debug] [ThreadPool]: On list_warehouse_bronze: Close
+[0m18:55:47.293626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd6426236-1b4e-4d40-b6b1-ea38f6c578fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000276E062BD40>]}
+[0m18:55:47.294236 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:55:47.294594 [debug] [MainThread]: On master: BEGIN
+[0m18:55:47.294926 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:55:47.295567 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:55:47.295920 [debug] [MainThread]: On master: COMMIT
+[0m18:55:47.296264 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:55:47.296594 [debug] [MainThread]: On master: COMMIT
+[0m18:55:47.297133 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:55:47.297491 [debug] [MainThread]: On master: Close
+[0m18:55:47.302658 [debug] [Thread-1 (]: Began running node model.eco_retail_analytics.gold_anomaly_check
+[0m18:55:47.303305 [info ] [Thread-1 (]: 1 of 1 START python table model gold.gold_mart_cold_chain_compliance ........... [RUN]
+[0m18:55:47.303930 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.eco_retail_analytics.gold_anomaly_check'
+[0m18:55:47.304428 [debug] [Thread-1 (]: Began compiling node model.eco_retail_analytics.gold_anomaly_check
+[0m18:55:47.336478 [debug] [Thread-1 (]: Writing injected SQL for node "model.eco_retail_analytics.gold_anomaly_check"
+[0m18:55:47.337579 [debug] [Thread-1 (]: Began executing node model.eco_retail_analytics.gold_anomaly_check
+[0m18:55:47.373804 [debug] [Thread-1 (]: Writing runtime python for node "model.eco_retail_analytics.gold_anomaly_check"
+[0m18:55:47.374910 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:57:16.489889 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_anomaly_check"
+[0m18:57:16.490442 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_anomaly_check: BEGIN
+[0m18:57:16.491223 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:57:16.491681 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_anomaly_check"
+[0m18:57:16.492103 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_anomaly_check: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_anomaly_check"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'gold'
+      AND table_name = 'gold_mart_cold_chain_compliance'
+  
+[0m18:57:16.493863 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:57:16.495423 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_anomaly_check"
+[0m18:57:16.495886 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_anomaly_check: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_anomaly_check"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'gold'
+      AND table_name = 'gold_mart_cold_chain_compliance'
+  
+[0m18:57:16.497634 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:57:16.504932 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_anomaly_check"
+[0m18:57:16.505442 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_anomaly_check: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_anomaly_check"} */
+alter table "warehouse"."gold"."gold_mart_cold_chain_compliance" rename to "gold_mart_cold_chain_compliance__dbt_backup"
+[0m18:57:16.506476 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:57:16.513561 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_anomaly_check"
+[0m18:57:16.514133 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_anomaly_check: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_anomaly_check"} */
+alter table "warehouse"."gold"."gold_mart_cold_chain_compliance__dbt_tmp" rename to "gold_mart_cold_chain_compliance"
+[0m18:57:16.515158 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:57:16.535469 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_anomaly_check: COMMIT
+[0m18:57:16.536045 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_anomaly_check"
+[0m18:57:16.536483 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_anomaly_check: COMMIT
+[0m18:57:16.537849 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:57:16.544294 [debug] [Thread-1 (]: Using duckdb connection "model.eco_retail_analytics.gold_anomaly_check"
+[0m18:57:16.544852 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_anomaly_check: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "eco_retail_analytics", "target_name": "dev", "node_id": "model.eco_retail_analytics.gold_anomaly_check"} */
+
+      drop table if exists "warehouse"."gold"."gold_mart_cold_chain_compliance__dbt_backup" cascade
+    
+[0m18:57:16.549162 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:57:16.552178 [debug] [Thread-1 (]: On model.eco_retail_analytics.gold_anomaly_check: Close
+[0m18:57:16.554757 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd6426236-1b4e-4d40-b6b1-ea38f6c578fa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027701C01610>]}
+[0m18:57:16.555565 [info ] [Thread-1 (]: 1 of 1 OK created python table model gold.gold_mart_cold_chain_compliance ...... [[32mOK[0m in 89.25s]
+[0m18:57:16.556389 [debug] [Thread-1 (]: Finished running node model.eco_retail_analytics.gold_anomaly_check
+[0m18:57:16.566046 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:57:16.566492 [debug] [MainThread]: On master: BEGIN
+[0m18:57:16.566872 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:57:16.567597 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:57:16.567980 [debug] [MainThread]: On master: COMMIT
+[0m18:57:16.568386 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:57:16.568748 [debug] [MainThread]: On master: COMMIT
+[0m18:57:16.569440 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:57:16.569886 [debug] [MainThread]: On master: Close
+[0m18:57:16.570403 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:57:16.570810 [debug] [MainThread]: Connection 'create_warehouse_gold' was properly closed.
+[0m18:57:16.571139 [debug] [MainThread]: Connection 'list_warehouse_gold' was properly closed.
+[0m18:57:16.571461 [debug] [MainThread]: Connection 'list_warehouse_warehouse' was properly closed.
+[0m18:57:16.571777 [debug] [MainThread]: Connection 'list_warehouse_silver' was properly closed.
+[0m18:57:16.572098 [debug] [MainThread]: Connection 'list_warehouse_bronze' was properly closed.
+[0m18:57:16.572428 [debug] [MainThread]: Connection 'model.eco_retail_analytics.gold_anomaly_check' was properly closed.
+[0m18:57:16.572812 [info ] [MainThread]: 
+[0m18:57:16.573227 [info ] [MainThread]: Finished running 1 table model in 0 hours 1 minutes and 29.48 seconds (89.48s).
+[0m18:57:16.574084 [debug] [MainThread]: Command end result
+[0m18:57:16.625564 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\target\manifest.json
+[0m18:57:16.628641 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\target\semantic_manifest.json
+[0m18:57:16.636514 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ACER\Documents\KBA\KBA-Eco-Retail-Analytics\target\run_results.json
+[0m18:57:16.636990 [info ] [MainThread]: 
+[0m18:57:16.637474 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:57:16.637908 [info ] [MainThread]: 
+[0m18:57:16.638418 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m18:57:16.640737 [debug] [MainThread]: Command `dbt run` succeeded at 18:57:16.640514 after 91.49 seconds
+[0m18:57:16.641304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027701B7F750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000276E0914550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027715B6B890>]}
+[0m18:57:16.641778 [debug] [MainThread]: Flushing usage events
+[0m18:57:18.235081 [debug] [MainThread]: An error was encountered while trying to flush usage events
