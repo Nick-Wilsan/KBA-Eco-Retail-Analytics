@@ -9,7 +9,7 @@
     as (
       WITH monthly_sales AS (
     SELECT 
-        DATE_TRUNC('month', order_date_id) AS kpi_month,
+        DATE_TRUNC('month', CAST(order_date_id AS DATE)) AS kpi_month,
         SUM(total_payment) AS total_revenue,
         SUM(quantity) AS total_items_sold
     FROM "warehouse"."silver"."silver_fact_sales"
@@ -17,16 +17,17 @@
 ),
 monthly_waste AS (
     SELECT 
-        DATE_TRUNC('month', date_id) AS kpi_month,
+        DATE_TRUNC('month', CAST(date_id AS DATE)) AS kpi_month,
         SUM(potential_waste_value) AS total_potential_waste_value
     FROM "warehouse"."gold"."gold_mart_food_waste_summary"
     GROUP BY 1
 ),
 monthly_cold_chain AS (
     SELECT 
-        DATE_TRUNC('month', date_id) AS kpi_month,
-        SUM(temperature_violations) AS total_temp_violations
-    FROM "warehouse"."gold"."gold_mart_cold_chain_compliance"
+        -- PERBAIKAN: Gunakan telemetry_timestamp karena date_id tidak ada di model anomali
+        DATE_TRUNC('month', CAST(telemetry_timestamp AS DATE)) AS kpi_month,
+        SUM(equipment_breach) AS total_temp_violations
+    FROM "warehouse"."gold"."gold_anomaly_check"
     GROUP BY 1
 )
 
