@@ -300,9 +300,9 @@ Hasil deteksi anomali Isolation Forest menghasilkan beberapa insight operasional
 
 ● Cold Chain Compliance Rate saat ini: Berdasarkan data yang telah diproses, compliance rate sedang menuju target ≥95%. Status ini terpantau real-time di Executive Dashboard melalui KPI card dengan indikator warna hijau/kuning/merah. 6. Visualisasi dan Dashboard Metabase 
 
-6.1 Pemilihan Jenis Grafik dan Justifikasi 
+Pemil 6.1 Pemilihan Jenis Grafik dan Justifikasi 
 
-Pemilihan jenis grafik di dashboard Metabase didasarkan pada prinsip 'grafik yang tepat untuk tipe data yang tepat'. Tabel berikut merangkum keputusan desain visualisasi untuk setiap komponen analitik: 
+ihan jenis grafik di dashboard Metabase didasarkan pada prinsip 'grafik yang tepat untuk tipe data yang tepat'. Tabel berikut merangkum keputusan desain visualisasi untuk setiap komponen analitik: 
 
 Komponen  Tipe Grafik  Justifikasi  Sumber Tabel Gold 
 

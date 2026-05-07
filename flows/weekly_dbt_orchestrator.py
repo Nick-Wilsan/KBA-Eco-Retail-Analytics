@@ -40,11 +40,11 @@ if __name__ == "__main__":
     # Jadwal CRON: "0 2 * * 1" berarti Menit 0, Jam 02:00 Pagi, Setiap Hari Senin
     
     # Gunakan baris ini untuk testing manual:
-    # weekly_dbt_pipeline()
+    weekly_dbt_pipeline()
     
     # Gunakan baris ini untuk mode jadwal otomatis (Server):
-    weekly_dbt_pipeline.serve(
-        name="weekly-ml-dbt-run",
-        cron="0 2 * * 1",
-        tags=["dbt", "machine-learning", "duckdb"]
-    )
+    # weekly_dbt_pipeline.serve(
+    #     name="weekly-ml-dbt-run",
+    #     cron="0 2 * * 1",
+    #     tags=["dbt", "machine-learning", "duckdb"]
+    # )
