@@ -11,11 +11,7 @@
     SELECT 
         CAST(product_id AS VARCHAR) AS product_id,
         -- Mapping Kategori sesuai revisi dosen
-        CASE 
-            WHEN LOWER(COALESCE(category_name, 'Uncategorized')) = 'produce' THEN 'Fresh Produce'
-            WHEN COALESCE(category_name, '') = '' THEN 'Uncategorized'
-            ELSE COALESCE(category_name, 'Uncategorized')
-        END AS category_name,
+        COALESCE(category_name, 'Uncategorized') AS category_name,
         CAST(unit_price AS DOUBLE) AS default_price,
         'Retail' AS source_system
     FROM "warehouse"."warehouse"."stg_retail_data"

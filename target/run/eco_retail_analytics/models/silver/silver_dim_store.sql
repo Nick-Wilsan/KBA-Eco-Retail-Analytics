@@ -46,7 +46,8 @@ SELECT
         WHEN 'WI_1' THEN 'Wisconsin_1'
         WHEN 'WI_2' THEN 'Wisconsin_2'
         WHEN 'WI_3' THEN 'Wisconsin_3'
-        ELSE store_id -- Fallback ke ID asli jika tidak ada di daftar
+        -- Jika tidak cocok dengan list di atas, gunakan format Kota
+        ELSE COALESCE(city || ' Store', 'Store ' || store_id)
     END AS store_name,
     city,
     state
