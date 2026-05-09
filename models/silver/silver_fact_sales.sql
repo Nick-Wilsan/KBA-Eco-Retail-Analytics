@@ -1,11 +1,3 @@
-{{ config(
-    materialized='table',
-    post_hook=[
-        "CREATE INDEX IF NOT EXISTS idx_fact_sales_product ON {{ this }} (product_id)",
-        "CREATE INDEX IF NOT EXISTS idx_fact_sales_store ON {{ this }} (store_id)"
-    ]
-) }}
-
 WITH sales_data AS (
     SELECT
         CAST(order_item_id AS VARCHAR) AS order_item_id,

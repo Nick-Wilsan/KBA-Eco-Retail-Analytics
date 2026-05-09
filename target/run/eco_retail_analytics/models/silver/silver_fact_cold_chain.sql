@@ -10,8 +10,8 @@
       WITH iot_data AS (
     SELECT
         -- Parse timezone-aware timestamp
-        CAST(timestamp AS TIMESTAMP) AS telemetry_timestamp,
-        CAST(timestamp AS DATE) AS date_id,
+        CAST(timestamp + INTERVAL 6 YEAR AS TIMESTAMP) AS telemetry_timestamp,
+        CAST(timestamp + INTERVAL 6 YEAR AS DATE) AS date_id,
         device_mac AS device_id,
         CAST(temp_celsius AS DOUBLE) AS temperature_c,
         CAST(humidity_pct AS DOUBLE) AS humidity_percentage,

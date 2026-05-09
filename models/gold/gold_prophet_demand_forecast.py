@@ -60,13 +60,13 @@ def model(dbt, session):
     future = model_ml.make_future_dataframe(periods=30)
     forecast = model_ml.predict(future)
 
-    # 5. Visualizations: Menampilkan dua plot sesuai permintaan
-    fig1 = model_ml.plot(forecast)
-    plt.title('Prophet Demand Forecast')
-    plt.show()
+    # # 5. Visualizations: Menampilkan dua plot sesuai permintaan
+    # fig1 = model_ml.plot(forecast)
+    # plt.title('Prophet Demand Forecast')
+    # plt.show()
 
-    fig2 = model_ml.plot_components(forecast)
-    plt.show()
+    # fig2 = model_ml.plot_components(forecast)
+    # plt.show()
 
     # 6. Database Write-back: Menyimpan hasil prediksi kembali ke schema duckdb
     # Tabel ini mencakup data historis beserta kolom prediksi (forecast_qty, lower_bound, upper_bound)

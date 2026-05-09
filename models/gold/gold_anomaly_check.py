@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 def model(dbt, session):
     dbt.config(
         materialized="table",
-        alias="gold_mart_cold_chain_compliance",
+        # alias="gold_mart_cold_chain_compliance",
         packages=["scikit-learn", "pandas", "matplotlib"]
     )
 
