@@ -17232,3 +17232,167 @@ alter table "warehouse"."gold"."gold_mart_cold_chain_compliance__dbt_tmp" rename
 [0m19:38:31.627074 [debug] [MainThread]: Flushing usage events
 [0m19:38:33.439519 [debug] [MainThread]: An error was encountered while trying to flush usage events
 >>>>>>> Stashed changes
+[0m19:31:32.984720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000187D6D4AED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000187D6E1EB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000187D6E1F710>]}
+
+
+============================== 19:31:33.090486 | e6601106-4163-4614-a50b-828b17a97fe1 ==============================
+[0m19:31:33.090486 [info ] [MainThread]: Running with dbt=1.11.8
+[0m19:31:33.090486 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'E:\\Tugas\\S4\\KBA\\project\\KBA-Eco-Retail-Analytics', 'invocation_command': 'dbt run', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'E:\\Tugas\\S4\\KBA\\project\\KBA-Eco-Retail-Analytics\\logs'}
+[0m19:31:33.780784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e6601106-4163-4614-a50b-828b17a97fe1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000187D6E68A50>]}
+[0m19:31:33.872490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e6601106-4163-4614-a50b-828b17a97fe1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000187D24A5E50>]}
+[0m19:31:33.895136 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m19:31:34.665686 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m19:31:37.810589 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 126 files changed.
+[0m19:31:37.810589 [debug] [MainThread]: Partial parsing: added file: eco_retail_analytics://models\gold\gold_mart_cold_chain_compliance.sql
+[0m19:31:37.810589 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\_get_column_list.sql
+[0m19:31:37.810589 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\next_week.sql
+[0m19:31:37.810589 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\_utils\modules_datetime.sql
+[0m19:31:37.810589 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\_get_like_pattern_expression.sql
+[0m19:31:37.810589 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_column_to_exist.sql
+[0m19:31:37.810589 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\day_of_week.sql
+[0m19:31:37.820772 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\today.sql
+[0m19:31:37.820772 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_columns_to_match_ordered_list.sql
+[0m19:31:37.820772 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\now.sql
+[0m19:31:37.820772 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\day_name.sql
+[0m19:31:37.820772 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\_list_intersect.sql
+[0m19:31:37.820772 [debug] [MainThread]: Partial parsing: updated file: eco_retail_analytics://models\silver\silver_fact_inventory.sql
+[0m19:31:37.820772 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\next_month.sql
+[0m19:31:37.820772 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\n_weeks_ago.sql
+[0m19:31:37.820772 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\math\percentile_cont.sql
+[0m19:31:37.820772 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\fiscal_date\get_fiscal_periods.sql
+[0m19:31:37.820772 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\distributional\expect_column_values_to_be_within_n_moving_stdevs.sql
+[0m19:31:37.820772 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_value_lengths_to_equal.sql
+[0m19:31:37.830822 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\_utils\generate_series.sql
+[0m19:31:37.830822 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\convert_timezone.sql
+[0m19:31:37.830822 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_mean_to_be_between.sql
+[0m19:31:37.830822 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\multi-column\expect_column_pair_values_A_to_be_greater_than_B.sql
+[0m19:31:37.830822 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_not_match_regex_list.sql
+[0m19:31:37.830822 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_stdev_to_be_between.sql
+[0m19:31:37.830822 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\to_unixtimestamp.sql
+[0m19:31:37.835921 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\last_month.sql
+[0m19:31:37.835921 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_columns_to_match_set.sql
+[0m19:31:37.835921 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_in_set.sql
+[0m19:31:37.835921 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_distinct_values_to_contain_set.sql
+[0m19:31:37.835921 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\_generalized\_ignore_row_if_expression.sql
+[0m19:31:37.840686 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_match_like_pattern_list.sql
+[0m19:31:37.840686 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_distinct_count_to_equal.sql
+[0m19:31:37.840686 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_have_consistent_casing.sql
+[0m19:31:37.840686 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_columns_to_contain_set.sql
+[0m19:31:37.840686 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\n_days_away.sql
+[0m19:31:37.840686 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\multi-column\expect_multicolumn_sum_to_equal.sql
+[0m19:31:37.840686 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_match_regex.sql
+[0m19:31:37.840686 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\multi-column\expect_column_pair_values_to_be_in_set.sql
+[0m19:31:37.840686 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\math\rand.sql
+[0m19:31:37.840686 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_max_to_be_between.sql
+[0m19:31:37.840686 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\from_unixtimestamp.sql
+[0m19:31:37.840686 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_unique.sql
+[0m19:31:37.840686 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\periods_since.sql
+[0m19:31:37.850791 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\math\median.sql
+[0m19:31:37.850791 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\utils\md5.sql
+[0m19:31:37.851825 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_distinct_count_to_equal_other_table.sql
+[0m19:31:37.851825 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_match_regex_list.sql
+[0m19:31:37.851825 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_grouped_row_values_to_have_recent_data.sql
+[0m19:31:37.851825 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_column_count_to_equal_other_table.sql
+[0m19:31:37.851825 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_not_match_like_pattern_list.sql
+[0m19:31:37.851825 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_of_type.sql
+[0m19:31:37.851825 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_row_count_to_be_between.sql
+[0m19:31:37.851825 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_aggregation_to_equal_other_table.sql
+[0m19:31:37.851825 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_median_to_be_between.sql
+[0m19:31:37.851825 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\last_month_number.sql
+[0m19:31:37.851825 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_null.sql
+[0m19:31:37.860801 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\_utils\date_spine.sql
+[0m19:31:37.860801 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\day_of_month.sql
+[0m19:31:37.860801 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\_generalized\expression_between.sql
+[0m19:31:37.860801 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_in_type_list.sql
+[0m19:31:37.860801 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_column_count_to_equal.sql
+[0m19:31:37.860801 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\n_months_away.sql
+[0m19:31:37.860801 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\week_start.sql
+[0m19:31:37.860801 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_sum_to_be_between.sql
+[0m19:31:37.860801 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_proportion_of_unique_values_to_be_between.sql
+[0m19:31:37.867826 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_distinct_values_to_equal_set.sql
+[0m19:31:37.867826 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\iso_week_end.sql
+[0m19:31:37.867826 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\n_days_ago.sql
+[0m19:31:37.870513 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\multi-column\expect_column_pair_values_to_be_equal.sql
+[0m19:31:37.870513 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\_generalized\equal_expression.sql
+[0m19:31:37.870513 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\yesterday.sql
+[0m19:31:37.870513 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\date_part.sql
+[0m19:31:37.870513 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_column_count_to_be_between.sql
+[0m19:31:37.870513 [debug] [MainThread]: Partial parsing: updated file: eco_retail_analytics://models\silver\silver_fact_cold_chain.sql
+[0m19:31:37.870513 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\n_months_ago.sql
+[0m19:31:37.870513 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\fiscal_date\get_fiscal_year_dates.sql
+[0m19:31:37.870513 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\n_weeks_away.sql
+[0m19:31:37.870513 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_unique_value_count_to_be_between.sql
+[0m19:31:37.870513 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\_generalized\_truth_expression.sql
+[0m19:31:37.870513 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\week_end.sql
+[0m19:31:37.870513 [debug] [MainThread]: Partial parsing: updated file: eco_retail_analytics://models\silver\silver_dim_store.sql
+[0m19:31:37.880736 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\month_name.sql
+[0m19:31:37.880736 [debug] [MainThread]: Partial parsing: updated file: eco_retail_analytics://models\gold\gold_anomaly_check.py
+[0m19:31:37.880736 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\week_of_year.sql
+[0m19:31:37.880736 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\multi-column\expect_compound_columns_to_be_unique.sql
+[0m19:31:37.880736 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\get_base_dates.sql
+[0m19:31:37.883850 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_between.sql
+[0m19:31:37.883850 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\iso_week_of_year.sql
+[0m19:31:37.883850 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_row_count_to_equal_other_table.sql
+[0m19:31:37.883850 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\distributional\expect_row_values_to_have_data_for_every_n_datepart.sql
+[0m19:31:37.883850 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\day_of_year.sql
+[0m19:31:37.883850 [debug] [MainThread]: Partial parsing: updated file: eco_retail_analytics://models\silver\silver_dim_product.sql
+[0m19:31:37.883850 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\regex\regexp_instr.sql
+[0m19:31:37.883850 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_min_to_be_between.sql
+[0m19:31:37.890547 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_row_values_to_have_recent_data.sql
+[0m19:31:37.890547 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_increasing.sql
+[0m19:31:37.890547 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_most_common_value_to_be_in_set.sql
+[0m19:31:37.890547 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\tomorrow.sql
+[0m19:31:37.890547 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\utils\groupby.sql
+[0m19:31:37.890547 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\_generalized\expression_is_true.sql
+[0m19:31:37.890547 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\next_month_number.sql
+[0m19:31:37.890547 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\utils\datatypes.sql
+[0m19:31:37.890547 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_distinct_count_to_be_less_than.sql
+[0m19:31:37.890547 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\round_timestamp.sql
+[0m19:31:37.890547 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_quantile_values_to_be_between.sql
+[0m19:31:37.890547 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_value_lengths_to_be_between.sql
+[0m19:31:37.890547 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_distinct_values_to_be_in_set.sql
+[0m19:31:37.899708 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\aggregate_functions\expect_column_distinct_count_to_be_greater_than.sql
+[0m19:31:37.900721 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_be_decreasing.sql
+[0m19:31:37.900721 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\last_week.sql
+[0m19:31:37.900721 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\multi-column\expect_select_column_values_to_be_unique_within_record.sql
+[0m19:31:37.900721 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_not_match_like_pattern.sql
+[0m19:31:37.900721 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\distributional\expect_column_values_to_be_within_n_stdevs.sql
+[0m19:31:37.900721 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\math\log_natural.sql
+[0m19:31:37.900721 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_not_be_in_set.sql
+[0m19:31:37.900721 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_row_count_to_equal_other_table_times_factor.sql
+[0m19:31:37.900721 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_not_match_regex.sql
+[0m19:31:37.900721 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\last_month_name.sql
+[0m19:31:37.900721 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\iso_week_start.sql
+[0m19:31:37.900721 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\get_date_dimension.sql
+[0m19:31:37.900721 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_row_count_to_equal.sql
+[0m19:31:37.900721 [debug] [MainThread]: Partial parsing: updated file: eco_retail_analytics://models\silver\silver_fact_sales.sql
+[0m19:31:37.910780 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\string_matching\expect_column_values_to_match_like_pattern.sql
+[0m19:31:37.910780 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\table_shape\expect_table_columns_to_not_contain_set.sql
+[0m19:31:37.910780 [debug] [MainThread]: Partial parsing: updated file: dbt_date://macros\calendar_date\next_month_name.sql
+[0m19:31:37.910780 [debug] [MainThread]: Partial parsing: updated file: dbt_expectations://macros\schema_tests\column_values_basic\expect_column_values_to_not_be_null.sql
+[0m19:31:38.692635 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test
+`dbt_expectations.expect_column_values_to_be_between` defined on
+'gold_mart_food_waste_summary' in package 'eco_retail_analytics'
+(models\gold\_gold_models.yml). Arguments to generic tests should be nested
+under the `arguments` property.
+[0m19:31:38.693600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'e6601106-4163-4614-a50b-828b17a97fe1', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000187D777DA10>]}
+[0m19:31:39.322689 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found two resources with the database representation ""warehouse"."gold"."gold_mart_cold_chain_compliance"".
+  dbt cannot create two resources with identical database representations. To fix this,
+  change the configuration of one of these resources:
+  - model.eco_retail_analytics.gold_mart_cold_chain_compliance (models\gold\gold_mart_cold_chain_compliance.sql)
+  - model.eco_retail_analytics.gold_anomaly_check (models\gold\gold_anomaly_check.py)
+[0m19:31:39.324240 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 9 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m19:31:39.326235 [debug] [MainThread]: Command `dbt run` failed at 19:31:39.326235 after 6.50 seconds
+[0m19:31:39.328235 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000187CF110610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000187D73AF250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000187D73ADA90>]}
+[0m19:31:39.329206 [debug] [MainThread]: Flushing usage events
+[0m19:31:41.313496 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,2 @@
+#Kill task
+taskkill /PID 2276 /F
