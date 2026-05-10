@@ -39,12 +39,12 @@ def model(dbt, session):
     df['anomaly_score'] = model_if.fit_predict(X)
 
     # 3. Post-Processing (CRITICAL): Menambahkan kolom tipe anomali dominan
-    # Menerapkan business rules dari Laporan Minggu 3:
-    # - Equipment Breach: anomali & durasi > 30 menit & delta_temp > 0.5 (gradual)
-    # - Operational Error: anomali & (durasi <= 30 menit ATAU delta_temp <= 0.5)
+    # Business rules berdasarkan distribusi aktual data (~19-24°C normal operating range):
+    # - Equipment Breach: anomali & suhu tinggi (>=20°C) → suhu naik di atas normal, indikasi alat rusak
+    # - Operational Error: anomali & suhu rendah (<20°C) → suhu turun tidak wajar, indikasi human error
     def get_anomaly_type(row):
         if row['anomaly_score'] == -1:
-            if row['duration_minutes'] > 30 and row['delta_temp_per_minute'] > 0.5:
+            if row['temperature_c'] >= 20:
                 return 'Equipment Breach'
             else:
                 return 'Operational Error'

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python flows/generate_all_screenshots.py)",
+      "Bash(python -c ' *)",
+      "Bash(python flows/weekly_dbt_orchestrator.py)",
+      "Bash(where dbt *)",
+      "Bash(dbt --version)"
+    ]
+  }
+}

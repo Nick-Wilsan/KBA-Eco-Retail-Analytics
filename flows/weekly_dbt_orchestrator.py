@@ -1,15 +1,38 @@
+
+import os
 import subprocess
+import shutil
 from prefect import flow, task
+
+def _find_dbt():
+    """Cari executable dbt: cek PATH, lalu fallback ke lokasi user scripts Windows."""
+    dbt = shutil.which("dbt")
+    if dbt:
+        return dbt
+    # Fallback untuk Windows Store Python yang menaruh scripts di AppData
+    scripts_dir = os.path.join(
+        os.environ.get("LOCALAPPDATA", ""),
+        "Packages",
+        "PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0",
+        "LocalCache", "local-packages", "Python313", "Scripts", "dbt.exe"
+    )
+    if os.path.exists(scripts_dir):
+        return scripts_dir
+    raise FileNotFoundError("dbt executable tidak ditemukan. Pastikan dbt-core sudah terinstall.")
+
+DBT_EXE = _find_dbt()
 
 @task(name="1. Jalankan Silver Layer (Data Transformation)", retries=1)
 def run_dbt_silver():
     """Memicu dbt untuk memperbarui data pembersihan dan agregasi."""
-    print("Menjalankan perintah: dbt run --select silver")
-    
-    # Menjalankan perintah dbt lewat shell/terminal Python
-    result = subprocess.run(["dbt", "run", "--select", "silver"], capture_output=True, text=True)
+    print(f"Menjalankan: {DBT_EXE} run --select silver")
+
+    result = subprocess.run(
+        [DBT_EXE, "run", "--select", "silver"],
+        capture_output=True, text=True
+    )
     print(result.stdout)
-    
+
     if result.returncode != 0:
         print(result.stderr)
         raise Exception("Gagal menjalankan dbt silver layer!")
@@ -17,12 +40,14 @@ def run_dbt_silver():
 @task(name="2. Jalankan Gold Layer & Machine Learning", retries=1)
 def run_dbt_gold():
     """Memicu dbt untuk menjalankan model SQL dan Python (Prophet & Isolation Forest)."""
-    print("Menjalankan perintah: dbt run --select gold")
-    
-    # Saat ini dijalankan, dbt akan otomatis mengeksekusi file .py buatan Kresna!
-    result = subprocess.run(["dbt", "run", "--select", "gold"], capture_output=True, text=True)
+    print(f"Menjalankan: {DBT_EXE} run --select gold")
+
+    result = subprocess.run(
+        [DBT_EXE, "run", "--select", "gold"],
+        capture_output=True, text=True
+    )
     print(result.stdout)
-    
+
     if result.returncode != 0:
         print(result.stderr)
         raise Exception("Gagal menjalankan dbt gold layer dan ML model!")

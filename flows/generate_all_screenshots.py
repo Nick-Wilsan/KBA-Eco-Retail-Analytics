@@ -95,27 +95,32 @@ def run_all():
     df_cold['anomaly_score'] = model_if.fit_predict(X)
     
     def get_anomaly_type(row):
-        if row['anomaly_score'] == -1 and row['duration_minutes'] > 30:
-            return 'Equipment Breach'
-        elif row['anomaly_score'] == -1 and row['duration_minutes'] <= 30:
-            return 'Operational Error'
-        else:
-            return 'Normal'
+        if row['anomaly_score'] == -1:
+            # Equipment Breach: suhu naik di atas rentang normal (>=20°C) → alat pendingin bermasalah
+            if row['temperature_c'] >= 20:
+                return 'Equipment Breach'
+            # Operational Error: suhu turun tidak wajar (<20°C) → kemungkinan human error
+            else:
+                return 'Operational Error'
+        return 'Normal'
 
     df_cold['anomaly_type_dominant'] = df_cold.apply(get_anomaly_type, axis=1)
-    
-    # Menampilkan data apa adanya (hanya me-rename kolom untuk tampilan agar sesuai instruksi jika memungkinkan)
-    # Tanpa membuat data palsu seperti 'zone'
+
+    print("\n--- DISTRIBUSI LABEL ANOMALI ---")
+    dist = df_cold['anomaly_type_dominant'].value_counts()
+    dist_pct = df_cold['anomaly_type_dominant'].value_counts(normalize=True).mul(100).round(2)
+    for label in dist.index:
+        print(f"  {label}: {dist[label]} rows ({dist_pct[label]:.2f}%)")
+    print("-" * 40)
+
     df_ss5 = df_cold[['telemetry_timestamp', 'device_id', 'temperature_c', 'anomaly_score', 'anomaly_type_dominant']].copy()
     df_ss5 = df_ss5.rename(columns={
         'telemetry_timestamp': 'timestamp',
         'device_id': 'sensor_id',
         'temperature_c': 'temperature'
     })
-    
+
     print("\n--- SS 5: SAMPEL OUTPUT KLASIFIKASI ISOLATION FOREST ---")
-    # Langsung print 20 baris pertama dari data asli yang sudah disortir berdasarkan waktu
-    # Dari hasil sebelumnya, 20 baris pertama sudah memuat campuran Normal dan Anomali
     print(df_ss5.head(20))
     print("-" * 80)
     
