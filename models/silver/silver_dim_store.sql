@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 WITH store_data AS (
     SELECT 
         CAST(store_id AS VARCHAR) AS store_id,
@@ -8,6 +10,7 @@ WITH store_data AS (
     
     UNION 
     
+    -- Mengambil store dari m5 forecasting
     SELECT 
         CAST(store_id AS VARCHAR) AS store_id,
         CAST(NULL AS VARCHAR) AS city,
@@ -15,6 +18,7 @@ WITH store_data AS (
     FROM {{ ref('stg_m5_forcasting') }}
     WHERE store_id IS NOT NULL
 ),
+-- Mengambil nilai unik dan mengisi kolom null dengan partisi jika tersedia
 deduplicated_stores AS (
     SELECT DISTINCT 
         store_id, 
@@ -25,19 +29,18 @@ deduplicated_stores AS (
 
 SELECT 
     store_id,
-    -- Mapping Kode Toko menjadi Nama Negara Bagian (US)
-    CASE store_id
-        WHEN 'CA_1' THEN 'California_1'
-        WHEN 'CA_2' THEN 'California_2'
-        WHEN 'CA_3' THEN 'California_3'
-        WHEN 'CA_4' THEN 'California_4'
-        WHEN 'TX_1' THEN 'Texas_1'
-        WHEN 'TX_2' THEN 'Texas_2'
-        WHEN 'TX_3' THEN 'Texas_3'
-        WHEN 'WI_1' THEN 'Wisconsin_1'
-        WHEN 'WI_2' THEN 'Wisconsin_2'
-        WHEN 'WI_3' THEN 'Wisconsin_3'
-        -- Jika tidak cocok dengan list di atas, gunakan format Kota
+    CASE 
+        -- Mapping Kode Negara Bagian (M5 Dataset) agar lebih deskriptif
+        WHEN store_id LIKE 'CA_%' THEN REPLACE(store_id, 'CA_', 'California_')
+        WHEN store_id LIKE 'TX_%' THEN REPLACE(store_id, 'TX_', 'Texas_')
+        WHEN store_id LIKE 'WI_%' THEN REPLACE(store_id, 'WI_', 'Wisconsin_')
+        
+        -- Mapping ID Numerik ke Nama Lokasi (Retail Dataset)
+        WHEN store_id = '37' THEN 'Mumbai Central'
+        WHEN store_id = '51' THEN 'Bangalore Square'
+        WHEN store_id = '45' THEN 'Delhi North'
+        
+        -- Fallback: Gunakan format Nama Kota atau format Store ID asli
         ELSE COALESCE(city || ' Store', 'Store ' || store_id)
     END AS store_name,
     city,

@@ -11,7 +11,7 @@
     SELECT
         CAST(order_item_id AS VARCHAR) AS order_item_id,
         CAST(order_id AS VARCHAR) AS order_id,
-        CAST(order_date + INTERVAL 2 YEAR AS DATE) AS order_date_id,
+        CAST(order_date + INTERVAL 2 YEAR + INTERVAL 4 MONTH AS DATE) AS order_date_id,
         CAST(customer_id AS VARCHAR) AS customer_id,
         CAST(store_id AS VARCHAR) AS store_id,
         CAST(product_id AS VARCHAR) AS product_id,
