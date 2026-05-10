@@ -5,7 +5,13 @@
       "Bash(python -c ' *)",
       "Bash(python flows/weekly_dbt_orchestrator.py)",
       "Bash(where dbt *)",
-      "Bash(dbt --version)"
+      "Bash(dbt --version)",
+      "Bash(Get-ChildItem -Recurse -Directory)",
+      "Bash(Select-Object FullName)",
+      "Bash(duckdb data/warehouse.duckdb \"SHOW SCHEMAS;\")",
+      "mcp__claude_ai_Figma__get_design_context",
+      "PowerShell(python -c \"import fpdf2; print\\('fpdf2 ok'\\)\" 2>&1; python -c \"import reportlab; print\\('reportlab ok'\\)\" 2>&1; python -c \"from fpdf import FPDF; print\\('fpdf ok'\\)\" 2>&1)",
+      "PowerShell(pip install *)"
     ]
   }
 }
