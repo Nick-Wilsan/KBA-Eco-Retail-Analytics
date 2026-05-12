@@ -1,16 +1,18 @@
-import pandas as pd
+import duckdb
 
-print('Checking IoT CSV date range...')
-df = pd.read_csv('data/iot_telemetry_cleaned.csv', usecols=['timestamp'])
-df['ts'] = pd.to_datetime(df['timestamp'], utc=True)
+try:
+    print('Testing query data ranges...')
+    conn = duckdb.connect('data/warehouse.duckdb', read_only=True)
+    
+    # Check Sales range
+    sales_res = conn.execute("SELECT MIN(order_date_id), MAX(order_date_id) FROM silver.silver_fact_sales").fetchall()
+    print(f'Sales Data Range: {sales_res}')
 
-print(f'Total rows : {len(df):,}')
-print(f'Min date   : {df["ts"].min()}')
-print(f'Max date   : {df["ts"].max()}')
-days = (df['ts'].max() - df['ts'].min()).days
-print(f'Total days : {days} hari ({days//365} tahun)')
+    # Check IoT range
+    iot_res = conn.execute("SELECT MIN(date_id), MAX(date_id) FROM silver.silver_fact_cold_chain").fetchall()
+    print(f'IoT Data Range: {iot_res}')
+    
+    conn.close()
 
-df['year'] = df['ts'].dt.year
-print()
-print('Rows per tahun:')
-print(df['year'].value_counts().sort_index().to_string())
+except Exception as e:
+    print(f'Error: {e}')

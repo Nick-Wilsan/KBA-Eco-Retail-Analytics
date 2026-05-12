@@ -6,7 +6,7 @@ conn = duckdb.connect("data/warehouse.duckdb", read_only=True)
 # 1. Kueri yang ingin kita tes (Misal: Metabase mencari data waste di toko tertentu)
 test_query = """
     SELECT * 
-    FROM warehouse_gold.gold_mart_food_waste_summary 
+    FROM gold.gold_mart_food_waste_summary 
     WHERE store_id = 'STR-001'
 """
 

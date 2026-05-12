@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 DB_PATH = os.getenv("DUCKDB_PATH", "data/warehouse.duckdb")
 # Sesuaikan skema: gunakan 'warehouse_gold' jika Anda pakai Solusi 1 sebelumnya, atau 'gold' jika Solusi 2
-SCHEMA_NAME = "warehouse_gold" 
+SCHEMA_NAME = "gold" 
 
 @task(name="1. Ekstraksi Data Historis (Gold Layer)", retries=2)
 def extract_training_data():

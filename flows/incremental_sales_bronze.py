@@ -9,7 +9,7 @@ DB_PATH = os.getenv("DUCKDB_PATH", "data/warehouse.duckdb")
 
 # Konfigurasi Dataset
 CSV_PATH = "data/raw/retail_data.csv"
-SCHEMA_NAME = "bronze"  # Sesuaikan jika Anda masih menggunakan 'warehouse_bronze'
+SCHEMA_NAME = "bronze"
 TABLE_NAME = "retail_data"
 
 @task(name="1. Dapatkan Watermark Terakhir", retries=2)

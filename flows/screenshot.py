@@ -13,7 +13,6 @@ print("="*80)
 print("1. TABEL DEMAND FORECAST (Layer Gold)")
 print("="*80)
 # Menampilkan 5 baris pertama untuk melihat forecast_qty, lower_bound, upper_bound
-# Catatan: Jika error, ganti 'gold.' menjadi 'warehouse_gold.'
 df_forecast = conn.execute("SELECT * FROM gold.gold_mart_demand_forecast LIMIT 5;").fetchdf()
 print(df_forecast)
 print("\n")
