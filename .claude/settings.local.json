@@ -11,7 +11,15 @@
       "Bash(duckdb data/warehouse.duckdb \"SHOW SCHEMAS;\")",
       "mcp__claude_ai_Figma__get_design_context",
       "PowerShell(python -c \"import fpdf2; print\\('fpdf2 ok'\\)\" 2>&1; python -c \"import reportlab; print\\('reportlab ok'\\)\" 2>&1; python -c \"from fpdf import FPDF; print\\('fpdf ok'\\)\" 2>&1)",
-      "PowerShell(pip install *)"
+      "PowerShell(pip install *)",
+      "Bash(python -c \"import duckdb; conn = duckdb.connect\\('data/database_eco_retail.duckdb'\\); tables = conn.execute\\('SHOW TABLES'\\).fetchall\\(\\); print\\(tables\\)\")",
+      "Bash(python -c \"import duckdb; conn = duckdb.connect\\('data/warehouse.duckdb'\\); tables = conn.execute\\('SHOW TABLES'\\).fetchall\\(\\); print\\('warehouse tables:', tables\\)\")",
+      "Bash(Get-Process -Id 25252 -ErrorAction SilentlyContinue)",
+      "Bash(Select-Object Id, ProcessName, MainWindowTitle)",
+      "PowerShell(Get-Process *)",
+      "Bash(cd C:\\\\Users\\\\ACER\\\\Documents\\\\KBA\\\\KBA-Eco-Retail-Analytics *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
